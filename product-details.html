@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisanal Raw Virgin Coconut Oil | COCOAURA — Pure Coconut. Naturally Better.</title>
+  <meta name="description" content="Explore product specifications, extraction method, coconut source, storage instructions, and culinary uses for COCOAURA natural coconut products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Global Header & Mandatory Navbar -->
+  <div id="site-header-mount"></div>
+
+  <main>
+    <!-- BREADCRUMB & QUICK PRODUCT SWITCHER -->
+    <section style="background:var(--color-secondary); border-bottom:1px solid var(--color-border); padding:1.15rem 0;">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:0.75rem;">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="shop.html">Shop</a>
+          <span>/</span>
+          <a href="shop.html?category=Virgin+Coconut+Oil" id="pdp-breadcrumb-category">Virgin Coconut Oil</a>
+          <span>/</span>
+          <span aria-current="page" id="pdp-breadcrumb-name">Artisanal Raw Virgin Coconut Oil</span>
+        </nav>
+
+        <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <span style="font-size:0.76rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-light); margin-right:0.25rem;">Explore SKU:</span>
+          <div class="size-pills" id="pdp-product-switcher" style="margin-top:0;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC PRODUCT DETAIL MOUNT (Populated by page-handlers.js) -->
+    <section class="section-padding" aria-label="Product Details">
+      <div class="container" id="pdp-mount">
+        <!-- Fallback / Initial Static Content for SEO & Accessibility before JS hydration -->
+        <div class="pdp-grid">
+          <div class="pdp-gallery">
+            <div class="pdp-main-image">
+              <img src="assets/images/product-vco-jar.jpg" alt="Artisanal Raw Virgin Coconut Oil">
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Virgin Coconut Oil</span>
+            <h1 class="heading-xl">Artisanal Raw Virgin Coconut Oil</h1>
+            <p class="lead-text">Centrifuge-extracted from fresh coconut milk within 6 hours of cracking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY & HANDLING TRANSPARENCY NOTE -->
+    <section class="section-padding-sm bg-secondary" style="border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
+      <div class="container">
+        <div class="transparency-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem;">
+          <div style="padding:1.35rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
+            <span class="eyebrow">Natural State Transition</span>
+            <h3 class="heading-sm" style="margin-bottom:0.4rem;">Solid Below 24°C · Liquid Above 24°C</h3>
+            <p style="font-size:0.88rem; color:var(--color-text-muted);">
+              Pure unfractionated coconut oil naturally transitions between snow-white butter and water-clear oil around 24°C (76°F). Both states indicate zero chemical winterization.
+            </p>
+          </div>
+
+          <div style="padding:1.35rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
+            <span class="eyebrow">Packaging Integrity</span>
+            <h3 class="heading-sm" style="margin-bottom:0.4rem;">Inert Glass &amp; High-Barrier Pouches</h3>
+            <p style="font-size:0.88rem; color:var(--color-text-muted);">
+              Oils and waters are filled into non-reactive glass to prevent plastic leaching, while dry goods use multi-layer oxygen-barrier craft pouches.
+            </p>
+          </div>
+
+          <div style="padding:1.35rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
+            <span class="eyebrow">Sample Data Transparency</span>
+            <h3 class="heading-sm" style="margin-bottom:0.4rem;">Honest Product Specifications</h3>
+            <p style="font-size:0.88rem; color:var(--color-text-muted);">
+              All batch codes, moisture metrics, and sourcing notes displayed on this product page represent clearly identified sample data for demonstration purposes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="section-padding" aria-labelledby="related-products-heading">
+      <div class="container">
+        <div class="section-header split">
+          <div>
+            <span class="eyebrow">Complete Your Coconut Pantry</span>
+            <h2 class="heading-xl" id="related-products-heading">Related Coconut Products</h2>
+          </div>
+          <a href="shop.html" class="btn btn-outline">Browse All Products →</a>
+        </div>
+
+        <div class="products-grid" id="pdp-related-products"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global 4-Column Footer & Newsletter -->
+  <div id="site-footer-mount"></div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-handlers.js"></script>
+</body>
+</html>

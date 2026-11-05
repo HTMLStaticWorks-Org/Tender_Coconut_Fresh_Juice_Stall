@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COCOAURA — Home-2 Editorial Atelier | Pure Coconut. Naturally Better.</title>
+  <meta name="description" content="Explore COCOAURA's alternative editorial homepage showcasing single-origin Virgin Coconut Oil, Cold-Pressed Oils, Desiccated Coconut, Chips, and Water.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Global Header & Mandatory Navbar -->
+  <div id="site-header-mount"></div>
+
+  <main>
+    <!-- 1. EDITORIAL SPLIT-SCREEN TROPICAL HERO -->
+    <section class="hero-home2" aria-label="Editorial Atelier Introduction">
+      <div class="hero-home2-left">
+        <div style="max-width:560px;">
+          <div style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.35rem 0.9rem; border-radius:var(--radius-pill); background:var(--color-secondary); border:1px solid var(--color-border); font-size:0.76rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-supporting); margin-bottom:1.25rem;">
+            <span>Edition II · Botanical Atelier Concept</span>
+          </div>
+
+          <h1 class="display-xl" style="margin-bottom:1.25rem;">
+            The Architecture of <em>Unrefined Coconut.</em>
+          </h1>
+
+          <p class="lead-text" style="margin-bottom:2rem;">
+            “Pure Coconut. Naturally Better.” — An ingredient-first study in single-origin coastal coconuts, cold mechanical extraction, and apothecary glass preservation for the discerning pantry.
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:0.85rem; margin-bottom:2.5rem;">
+            <a href="shop.html" class="btn btn-primary btn-lg">
+              <span>Explore Full Atelier</span>
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="product-details.html?id=vco-raw-glass" class="btn btn-outline btn-lg">
+              Inspect Flagship VCO
+            </a>
+          </div>
+
+          <!-- Editorial Index Metadata -->
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; padding:1.25rem; background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md);">
+            <div>
+              <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-light); display:block;">Species</span>
+              <strong style="font-size:0.9rem;">Cocos nucifera (Tall)</strong>
+            </div>
+            <div>
+              <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-light); display:block;">Pressing Temp</span>
+              <strong style="font-size:0.9rem;">22°C – 42°C Cold</strong>
+            </div>
+            <div>
+              <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-text-light); display:block;">Additives</span>
+              <strong style="font-size:0.9rem;">0% Sulfites / Hexane</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-home2-right">
+        <img src="assets/images/hero-home2.jpg" alt="Complete COCOAURA product collection arranged on warm travertine stone blocks in morning palm light" width="960" height="880">
+        <div class="hero-home2-caption">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:0.75rem; margin-bottom:0.35rem;">
+            <span class="badge badge-primary">2026 Coastal Harvest</span>
+            <span style="font-size:0.8rem; font-weight:700;">10 Small-Batch SKUs</span>
+          </div>
+          <p style="font-size:0.86rem; color:var(--color-text-muted); margin-bottom:0.65rem;">
+            Featuring Raw Centrifuge Virgin Oil, Amber Expeller Oil, Patisserie Desiccated Cuts, Hearth-Toasted Chips &amp; Tender Grove Water.
+          </p>
+          <a href="#home2-curated-collection" style="font-size:0.84rem; font-weight:700; color:var(--color-primary); text-decoration:underline;">Browse Curated Grid ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. STRONG PRODUCT-LED INTRODUCTION & MINIMALIST COLLECTION TABS -->
+    <section class="section-padding" id="home2-curated-collection" aria-labelledby="home2-collection-heading">
+      <div class="container">
+        <div class="section-header split">
+          <div>
+            <span class="eyebrow">Minimalist Product Collection</span>
+            <h2 class="heading-xl" id="home2-collection-heading">Curated by Culinary Discipline</h2>
+          </div>
+
+          <!-- Interactive Filter Tabs -->
+          <div class="size-pills" role="tablist" aria-label="Filter collection by category group">
+            <button type="button" class="size-pill active" data-home2-tab="all" role="tab">All Offerings</button>
+            <button type="button" class="size-pill" data-home2-tab="oils" role="tab">Virgin &amp; Cold-Pressed Oils</button>
+            <button type="button" class="size-pill" data-home2-tab="pantry" role="tab">Desiccated &amp; Cream</button>
+            <button type="button" class="size-pill" data-home2-tab="snacks-drinks" role="tab">Chips &amp; Coconut Water</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="home2-collection-grid"></div>
+      </div>
+    </section>
+
+    <!-- 3. FULL-WIDTH ARCHITECTURAL PRODUCT CATEGORY SHOWCASE -->
+    <section class="section-padding bg-secondary" aria-labelledby="home2-index-heading">
+      <div class="container">
+        <div class="section-header split">
+          <div>
+            <span class="eyebrow">Botanical Pantry Index</span>
+            <h2 class="heading-xl" id="home2-index-heading">Five Expressions of One Fruit</h2>
+          </div>
+          <p style="max-width:440px; color:var(--color-text-muted); font-size:0.94rem;">
+            Every part of the mature and tender coconut is honored through dedicated, low-intervention craft techniques.
+          </p>
+        </div>
+
+        <div class="editorial-strip-list">
+          <div class="editorial-strip-item">
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              <span class="editorial-strip-num">01</span>
+              <img src="assets/images/product-vco-jar.jpg" alt="Virgin Coconut Oil" class="editorial-strip-thumb" loading="lazy">
+            </div>
+            <div>
+              <h3 class="heading-md">Virgin Coconut Oil</h3>
+              <span style="font-size:0.82rem; color:var(--color-supporting); font-weight:600;">Chilled Wet-Milling Centrifuge · 250ml – 1000ml</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--color-text-muted);">
+              Spun from fresh first-press coconut milk within 6 hours of cracking. Water-clear when warm with a whisper-light fresh aroma.
+            </p>
+            <div style="text-align:right;">
+              <a href="shop.html?category=Virgin+Coconut+Oil" class="btn btn-outline btn-sm">Explore VCO →</a>
+            </div>
+          </div>
+
+          <div class="editorial-strip-item">
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              <span class="editorial-strip-num">02</span>
+              <img src="assets/images/product-cold-pressed.jpg" alt="Cold-Pressed Coconut Oil" class="editorial-strip-thumb" loading="lazy">
+            </div>
+            <div>
+              <h3 class="heading-md">Cold-Pressed Coconut Oil</h3>
+              <span style="font-size:0.82rem; color:var(--color-supporting); font-weight:600;">Low-RPM Expeller (&lt; 42°C) · Amber Glass &amp; Reserve</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--color-text-muted);">
+              Mechanically pressed from gently dehydrated white kernel and triple-filtered through unbleached cotton for traditional cooking.
+            </p>
+            <div style="text-align:right;">
+              <a href="shop.html?category=Cold-Pressed+Coconut+Oil" class="btn btn-outline btn-sm">Explore Cold-Pressed →</a>
+            </div>
+          </div>
+
+          <div class="editorial-strip-item">
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              <span class="editorial-strip-num">03</span>
+              <img src="assets/images/product-desiccated.jpg" alt="Desiccated Coconut" class="editorial-strip-thumb" loading="lazy">
+            </div>
+            <div>
+              <h3 class="heading-md">Desiccated Coconut</h3>
+              <span style="font-size:0.82rem; color:var(--color-supporting); font-weight:600;">Fine &amp; Medium Patisserie Shreds · Unsweetened</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--color-text-muted);">
+              Snow-white pared kernel air-dried without sulfites or whiteners, retaining natural coconut oil richness for baking.
+            </p>
+            <div style="text-align:right;">
+              <a href="shop.html?category=Desiccated+Coconut" class="btn btn-outline btn-sm">Explore Desiccated →</a>
+            </div>
+          </div>
+
+          <div class="editorial-strip-item">
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              <span class="editorial-strip-num">04</span>
+              <img src="assets/images/product-chips.jpg" alt="Coconut Chips" class="editorial-strip-thumb" loading="lazy">
+            </div>
+            <div>
+              <h3 class="heading-md">Coconut Chips</h3>
+              <span style="font-size:0.82rem; color:var(--color-supporting); font-weight:600;">Hearth-Toasted Nectar Glaze &amp; Raw Sun-Dried</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--color-text-muted);">
+              Thick-shaved ribbons kettle-baked in small rotary batches for an airy, caramel-golden crunch straight from the pouch.
+            </p>
+            <div style="text-align:right;">
+              <a href="shop.html?category=Coconut+Chips" class="btn btn-outline btn-sm">Explore Chips →</a>
+            </div>
+          </div>
+
+          <div class="editorial-strip-item">
+            <div style="display:flex; align-items:center; gap:0.85rem;">
+              <span class="editorial-strip-num">05</span>
+              <img src="assets/images/product-water.jpg" alt="Coconut Water" class="editorial-strip-thumb" loading="lazy">
+            </div>
+            <div>
+              <h3 class="heading-md">Tender Coconut Water</h3>
+              <span style="font-size:0.82rem; color:var(--color-supporting); font-weight:600;">7-Month Single-Origin · Frosted Glass Bottles</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--color-text-muted);">
+              Micro-filtered directly from young green coconuts at peak natural sweetness—never from concentrate and zero added sugar.
+            </p>
+            <div style="text-align:right;">
+              <a href="shop.html?category=Coconut+Water" class="btn btn-outline btn-sm">Explore Water →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INGREDIENT & PRODUCTION STORYTELLING + DUAL OIL COMPARISON -->
+    <section class="section-padding" aria-labelledby="extraction-comparison-heading">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Craft &amp; Extraction Study</span>
+          <h2 class="heading-xl" id="extraction-comparison-heading">Two Oils, Two Culinary Personalities</h2>
+          <p class="lead-text" style="margin-top:0.6rem;">
+            Understanding how extraction method shapes aroma, mouthfeel, and kitchen application.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
+          <!-- Card 1: Centrifuge Virgin Oil -->
+          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem;">
+                <span class="badge badge-primary">Method I · Wet-Milling Centrifuge</span>
+                <span style="font-size:0.82rem; color:var(--color-text-light);">Ambient ~24°C</span>
+              </div>
+              <div style="display:flex; gap:1.25rem; align-items:center; margin-bottom:1.35rem;">
+                <img src="assets/images/product-vco-bottle.jpg" alt="Chef's Pouring Virgin Coconut Oil" style="width:96px; height:96px; border-radius:var(--radius-md); object-fit:cover; border:1px solid var(--color-border);">
+                <div>
+                  <h3 class="heading-lg">Raw Virgin Coconut Oil</h3>
+                  <p style="font-size:0.86rem; color:var(--color-text-muted);">Pressed into fresh coconut milk, then spun in chilled stainless centrifuges.</p>
+                </div>
+              </div>
+              <ul style="display:flex; flex-direction:column; gap:0.65rem; font-size:0.92rem; color:var(--color-text-muted); margin-bottom:1.75rem; border-top:1px solid var(--color-border-subtle); padding-top:1.15rem;">
+                <li><strong>Sensory Profile:</strong> Delicate, floral, fresh-off-the-tree aroma; ultra-clean finish.</li>
+                <li><strong>Visual Appearance:</strong> Water-clear liquid when warm; snowy porcelain solid when cool.</li>
+                <li><strong>Best For:</strong> Delicate pastry, raw confections, finishing drizzles, seafood searing &amp; skin rituals.</li>
+              </ul>
+            </div>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <a href="product-details.html?id=vco-raw-glass" class="btn btn-primary btn-sm">Shop Raw Jar ($24)</a>
+              <a href="product-details.html?id=vco-culinary-pour" class="btn btn-outline btn-sm">Shop Chef's Bottle ($26)</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Expeller Cold-Pressed Oil -->
+          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem;">
+                <span class="badge badge-accent">Method II · Low-RPM Expeller</span>
+                <span style="font-size:0.82rem; color:var(--color-text-light);">Below 42°C (107°F)</span>
+              </div>
+              <div style="display:flex; gap:1.25rem; align-items:center; margin-bottom:1.35rem;">
+                <img src="assets/images/product-cold-pressed.jpg" alt="Estate Cold-Pressed Coconut Oil" style="width:96px; height:96px; border-radius:var(--radius-md); object-fit:cover; border:1px solid var(--color-border);">
+                <div>
+                  <h3 class="heading-lg">Cold-Pressed Coconut Oil</h3>
+                  <p style="font-size:0.86rem; color:var(--color-text-muted);">Slowly pressed from warm-air dried mature kernel and cloth-filtered.</p>
+                </div>
+              </div>
+              <ul style="display:flex; flex-direction:column; gap:0.65rem; font-size:0.92rem; color:var(--color-text-muted); margin-bottom:1.75rem; border-top:1px solid var(--color-border-subtle); padding-top:1.15rem;">
+                <li><strong>Sensory Profile:</strong> Richer, rounded, gently toasted nutty coconut character.</li>
+                <li><strong>Visual Appearance:</strong> Pale golden-ivory tint when liquid; creamy white when solid.</li>
+                <li><strong>Best For:</strong> Daily skillet sautéing, spice tempering, curries, roasting &amp; family baking.</li>
+              </ul>
+            </div>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+              <a href="product-details.html?id=cold-pressed-amber" class="btn btn-primary btn-sm">Shop Amber Glass ($22)</a>
+              <a href="product-details.html?id=cold-pressed-culinary-tin" class="btn btn-outline btn-sm">Shop 1L Reserve ($34)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ORIGIN STORYTELLING & SMALL-LOT PANTRY BENTO -->
+    <section class="section-padding bg-surface" style="border-top:1px solid var(--color-border-subtle); border-bottom:1px solid var(--color-border-subtle);" aria-labelledby="bento-story-heading">
+      <div class="container">
+        <div class="section-header split">
+          <div>
+            <span class="eyebrow">Beyond the Oil Bottle</span>
+            <h2 class="heading-xl" id="bento-story-heading">Whole-Fruit Craft &amp; Zero-Waste Philosophy</h2>
+          </div>
+          <a href="sourcing.html" class="btn btn-outline">Read Full Sourcing Report →</a>
+        </div>
+
+        <div class="cards-2col-tab" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+          <div style="position:relative; border-radius:var(--radius-lg); overflow:hidden; min-height:360px; display:flex; align-items:flex-end; padding:1.75rem; color:#FAF8F4; border:1px solid var(--color-border);">
+            <img src="assets/images/sourcing-plantation.jpg" alt="Coconut grove harvest" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16,30,22,0.9), rgba(16,30,22,0.15)); z-index:1;"></div>
+            <div style="position:relative; z-index:2;">
+              <span class="badge badge-accent" style="margin-bottom:0.65rem;">Origin Integrity</span>
+              <h3 class="heading-md" style="color:#FAF8F4; margin-bottom:0.4rem;">Regenerative Coastal Groves</h3>
+              <p style="font-size:0.88rem; color:rgba(250,248,244,0.85);">
+                Coconut husks return to the grove floor as moisture-retaining mulch while shells fuel indirect warm-air drying kilns.
+              </p>
+            </div>
+          </div>
+
+          <div style="position:relative; border-radius:var(--radius-lg); overflow:hidden; min-height:360px; display:flex; align-items:flex-end; padding:1.75rem; color:#FAF8F4; border:1px solid var(--color-border);">
+            <img src="assets/images/product-butter.jpg" alt="Stone milled coconut butter and cream" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16,30,22,0.9), rgba(16,30,22,0.15)); z-index:1;"></div>
+            <div style="position:relative; z-index:2;">
+              <span class="badge badge-cream" style="margin-bottom:0.65rem;">Granite Melanger</span>
+              <h3 class="heading-md" style="color:#FAF8F4; margin-bottom:0.4rem;">18-Hour Stone-Milled Cream</h3>
+              <p style="font-size:0.88rem; color:rgba(250,248,244,0.85);">
+                Whole dehydrated kernel slowly ground between granite stones into a spoonable, stabilizer-free culinary cream.
+              </p>
+            </div>
+          </div>
+
+          <div style="position:relative; border-radius:var(--radius-lg); overflow:hidden; min-height:360px; display:flex; align-items:flex-end; padding:1.75rem; color:#FAF8F4; border:1px solid var(--color-border);">
+            <img src="assets/images/product-flour.jpg" alt="Stone milled coconut flour and desiccated cuts" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16,30,22,0.9), rgba(16,30,22,0.15)); z-index:1;"></div>
+            <div style="position:relative; z-index:2;">
+              <span class="badge badge-primary" style="margin-bottom:0.65rem;">Patisserie Grade</span>
+              <h3 class="heading-md" style="color:#FAF8F4; margin-bottom:0.4rem;">Unbleached Baking Cuts</h3>
+              <p style="font-size:0.88rem; color:rgba(250,248,244,0.85);">
+                Snowy-white desiccated coconut with zero metabisulfites—preserving natural sweetness for modern pastry kitchens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ALTERNATIVE PROMOTIONAL & WHOLESALE FEATURE -->
+    <section class="section-padding" aria-label="Promotional and Trade Offerings">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
+          <!-- Tasting Bundle Promo -->
+          <div style="background:var(--color-secondary); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <span class="eyebrow">First-Order Invitation</span>
+              <h2 class="heading-lg" style="margin-bottom:0.75rem;">Save 10% on Your First Pantry Order</h2>
+              <p style="color:var(--color-text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
+                Experience the difference of same-day centrifuge Virgin Coconut Oil and hearth-toasted chips. Apply code <strong>COCOAURA10</strong> in your shopping cart, plus enjoy complimentary ground shipping on orders over $60.
+              </p>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;">
+              <button type="button" class="btn btn-primary" data-quick-add="vco-raw-glass" data-size="500 ml">
+                Quick-Add Flagship 500ml VCO ($24)
+              </button>
+              <a href="cart.html" class="btn btn-outline">Go to Cart</a>
+            </div>
+          </div>
+
+          <!-- Wholesale & Culinary Trade Feature -->
+          <div style="background:#1B4332; color:#FAF8F4; border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <span class="eyebrow" style="color:#E2B86B;">Trade &amp; Hospitality Desk</span>
+              <h2 class="heading-lg" style="color:#FAF8F4; margin-bottom:0.75rem;">Wholesale &amp; Private-Batch Enquiries</h2>
+              <p style="color:rgba(250,248,244,0.84); font-size:0.95rem; margin-bottom:1.5rem;">
+                We supply artisanal bakeries, organic grocers, boutique hotels, and clean-label food manufacturers with 5L–200L oil drums and 25kg desiccated coconut sacks with complete batch documentation.
+              </p>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+              <a href="contact-bulk-enquiry.html#bulk-enquiry" class="btn btn-accent">
+                Submit Bulk Enquiry →
+              </a>
+              <a href="contact-bulk-enquiry.html" class="btn btn-outline" style="color:#FAF8F4; border-color:rgba(255,255,255,0.28);">
+                Contact Trade Desk
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global 4-Column Footer & Newsletter -->
+  <div id="site-footer-mount"></div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-handlers.js"></script>
+</body>
+</html>

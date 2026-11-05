@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Cart | COCOAURA — Pure Coconut. Naturally Better.</title>
+  <meta name="description" content="Review your selected COCOAURA coconut products, adjust quantities, apply promo codes, and proceed to checkout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Global Header & Mandatory Navbar -->
+  <div id="site-header-mount"></div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero-compact" aria-labelledby="cart-page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="shop.html">Shop</a>
+          <span>/</span>
+          <span aria-current="page">Shopping Cart</span>
+        </nav>
+
+        <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:1rem;">
+          <div>
+            <span class="eyebrow">Your Coconut Pantry Selection</span>
+            <h1 class="display-lg" id="cart-page-title">Shopping Cart</h1>
+          </div>
+          <span class="badge badge-outline">Complimentary Shipping Over $60 · Code: COCOAURA10</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC CART MOUNT -->
+    <section class="section-padding" aria-label="Shopping Cart Contents">
+      <div class="container" id="cart-page-mount"></div>
+    </section>
+  </main>
+
+  <!-- Global 4-Column Footer & Newsletter -->
+  <div id="site-footer-mount"></div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-handlers.js"></script>
+</body>
+</html>

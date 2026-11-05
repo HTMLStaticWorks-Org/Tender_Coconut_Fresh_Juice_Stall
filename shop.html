@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Coconut Products | COCOAURA — Pure Coconut. Naturally Better.</title>
+  <meta name="description" content="Browse COCOAURA's complete collection of Virgin Coconut Oil, Cold-Pressed Coconut Oil, Sulfite-Free Desiccated Coconut, Coconut Chips, and Tender Coconut Water.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Global Header & Mandatory Navbar -->
+  <div id="site-header-mount"></div>
+
+  <main>
+    <!-- COMPACT PAGE HERO & CATEGORY PILL NAVIGATION -->
+    <section class="page-hero-compact" aria-labelledby="shop-page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span aria-current="page">Shop All Coconut Products</span>
+        </nav>
+
+        <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:1.5rem; margin-bottom:1.5rem;">
+          <div>
+            <span class="eyebrow">Single-Origin Pantry &amp; Apothecary</span>
+            <h1 class="display-lg" id="shop-page-title">The Coconut Collection</h1>
+          </div>
+          <p style="max-width:480px; color:var(--color-text-muted); font-size:0.95rem;">
+            Every bottle, jar, and resealable craft pouch is pressed or dehydrated from freshly husked coastal coconuts with zero chemical solvents or sulfites.
+          </p>
+        </div>
+
+        <!-- Category Quick Navigation Pills -->
+        <div class="size-pills" role="navigation" aria-label="Quick category filter">
+          <button type="button" class="size-pill active" data-cat-pill="all">All Products (10)</button>
+          <button type="button" class="size-pill" data-cat-pill="Virgin Coconut Oil">Virgin Coconut Oil</button>
+          <button type="button" class="size-pill" data-cat-pill="Cold-Pressed Coconut Oil">Cold-Pressed Coconut Oil</button>
+          <button type="button" class="size-pill" data-cat-pill="Desiccated Coconut">Desiccated Coconut</button>
+          <button type="button" class="size-pill" data-cat-pill="Coconut Chips">Coconut Chips</button>
+          <button type="button" class="size-pill" data-cat-pill="Coconut Water">Coconut Water</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP MAIN LAYOUT (SIDEBAR FILTERS + PRODUCT GRID) -->
+    <section class="section-padding-sm" aria-label="Product Catalog and Filters">
+      <div class="container">
+        <div class="mobile-drawer-backdrop" id="shop-filter-backdrop"></div>
+
+        <div class="shop-layout">
+          <!-- Left Filter Sidebar / Mobile Drawer -->
+          <aside class="shop-sidebar" id="shop-sidebar" aria-label="Product Filters">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.85rem; border-bottom:1px solid var(--color-border);">
+              <strong style="font-family:var(--font-heading); font-size:1.2rem;">Filter Collection</strong>
+              <button type="button" class="btn btn-outline btn-sm mobile-filter-btn" data-close-shop-filters style="padding:0.3rem 0.75rem;">
+                Done
+              </button>
+            </div>
+
+            <!-- 1. Product Category Filter -->
+            <div class="filter-group">
+              <div class="filter-title">Product Category</div>
+              <div class="filter-options">
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-category" value="all" checked> All Categories</span>
+                  <span>10</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-category" value="Virgin Coconut Oil"> Virgin Coconut Oil</span>
+                  <span>3</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-category" value="Cold-Pressed Coconut Oil"> Cold-Pressed Oil</span>
+                  <span>2</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-category" value="Desiccated Coconut"> Desiccated Coconut</span>
+                  <span>2</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-category" value="Coconut Chips"> Coconut Chips</span>
+                  <span>2</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-category" value="Coconut Water"> Coconut Water</span>
+                  <span>1</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 2. Price Range Filter -->
+            <div class="filter-group">
+              <div class="filter-title">Price Range</div>
+              <div class="filter-options">
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-price" value="all" checked> All Prices</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-price" value="under-15"> Under $15.00</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-price" value="15-25"> $15.00 – $25.00</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-price" value="over-25"> Over $25.00</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 3. Product Size Filter -->
+            <div class="filter-group">
+              <div class="filter-title">Available Size</div>
+              <div class="filter-options">
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-size" value="all" checked> All Sizes</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-size" value="250 ml"> 250 ml Glass</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-size" value="500 ml"> 500 ml Glass</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-size" value="1000 ml"> 1000 ml Reserve</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-size" value="250 g"> 250 g Pouch</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-size" value="400 g"> 400 g Pouch</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-size" value="6 × 330 ml"> 6 × 330 ml Case</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 4. Availability Filter -->
+            <div class="filter-group">
+              <div class="filter-title">Availability</div>
+              <div class="filter-options">
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-availability" value="all" checked> All Availability</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-availability" value="In Stock"> In Stock</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-availability" value="Limited Harvest"> Limited Harvest</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 5. Product Type Filter -->
+            <div class="filter-group">
+              <div class="filter-title">Product Type</div>
+              <div class="filter-options">
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-type" value="all" checked> All Types</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-type" value="Culinary Oil"> Culinary Oil</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-type" value="Baking & Pantry"> Baking &amp; Pantry</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-type" value="Ready-to-Eat Snack"> Ready-to-Eat Snack</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-type" value="Beverage"> Beverage</span>
+                </label>
+                <label class="filter-checkbox">
+                  <span><input type="radio" name="filter-type" value="Culinary Cream & Spread"> Cream &amp; Spread</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-outline btn-sm btn-block" data-reset-shop-filters style="margin-top:1.25rem;">
+              Reset All Filters
+            </button>
+          </aside>
+
+          <!-- Right Content Area: Toolbar, Active Chips, Grid, Load More -->
+          <div>
+            <!-- Toolbar -->
+            <div class="shop-toolbar">
+              <div style="display:flex; align-items:center; gap:0.75rem; flex:1; min-width:220px;">
+                <button type="button" class="btn btn-secondary btn-sm mobile-filter-btn" data-open-shop-filters>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
+                  <span>Filters</span>
+                </button>
+
+                <div style="position:relative; flex:1; max-width:320px;">
+                  <input type="search" id="shop-search-input" class="form-control" placeholder="Search coconut oil, chips, water..." aria-label="Search products in shop" style="padding:0.55rem 0.9rem; font-size:0.88rem;">
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span id="shop-result-count" style="font-size:0.88rem; color:var(--color-text-muted);">
+                  Showing <strong>8</strong> of <strong>10</strong> coconut products
+                </span>
+
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <label for="shop-sort-select" style="font-size:0.84rem; font-weight:600; color:var(--color-text-muted);">Sort by:</label>
+                  <select id="shop-sort-select" class="form-control" style="width:auto; padding:0.5rem 2.2rem 0.5rem 0.85rem; font-size:0.88rem;">
+                    <option value="featured">Featured</option>
+                    <option value="new">New Arrivals</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Active Filter Chips -->
+            <div class="active-filters-bar" id="shop-active-chips" style="display:none;"></div>
+
+            <!-- Product Grid (3 columns in Shop layout) -->
+            <div class="products-grid" id="shop-products-grid" style="grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));"></div>
+
+            <!-- Pagination / Load More -->
+            <div id="shop-load-more-wrap" style="text-align:center; margin-top:2.5rem;">
+              <button type="button" class="btn btn-secondary btn-lg" id="shop-load-more-btn">
+                Show All 10 Products (+2 More)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHOLESALE CALLOUT STRIP -->
+    <section class="section-padding-sm bg-secondary" style="border-top:1px solid var(--color-border);">
+      <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1.5rem;">
+        <div>
+          <span class="eyebrow">Commercial &amp; Culinary Volume</span>
+          <h2 class="heading-lg">Looking for 5L Pails, 200L Drums, or 25kg Sacks?</h2>
+          <p style="color:var(--color-text-muted); font-size:0.94rem;">
+            Our Trade Desk prepares custom wholesale pricing for retailers, bakeries, food manufacturers, and hospitality buyers.
+          </p>
+        </div>
+        <a href="contact-bulk-enquiry.html#bulk-enquiry" class="btn btn-primary">Request Bulk Pricing →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global 4-Column Footer & Newsletter -->
+  <div id="site-footer-mount"></div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-handlers.js"></script>
+</body>
+</html>

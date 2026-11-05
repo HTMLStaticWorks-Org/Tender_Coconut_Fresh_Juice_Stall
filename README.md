@@ -1,2 +1,0 @@
-# Tender_Coconut_Fresh_Juice_Stall
-Automated website repository for Tender_Coconut_Fresh_Juice_Stall
