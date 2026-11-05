@@ -1,5 +1,5 @@
 /* ==========================================================================
-   COCOAURA — Page-Specific Interactive Controllers (page-handlers.js)
+   Tender Coconut & Fresh Juice Stall — Interactive Controllers (page-handlers.js)
    Handles: Home-1 Spotlight, Home-2 Collection Tabs, Shop Filtering/Sorting/
    Pagination, Product Details Gallery & Buy Flow, Contact & Bulk Enquiry
    Validation, FAQ Accordions, Cart Management, and Checkout Flow.
@@ -89,14 +89,14 @@
 
     function renderHome2Collection(filterGroup) {
       let list = data.products;
-      if (filterGroup === "oils") {
+      if (filterGroup === "coconuts" || filterGroup === "oils") {
         list = data.products.filter(
-          (p) => p.category === "Virgin Coconut Oil" || p.category === "Cold-Pressed Coconut Oil"
+          (p) => p.category === "Tender Coconuts" || p.category === "Bottled Coconut Water"
         );
-      } else if (filterGroup === "pantry") {
-        list = data.products.filter((p) => p.category === "Desiccated Coconut" || p.id === "cream-velvet-jar");
-      } else if (filterGroup === "snacks-drinks") {
-        list = data.products.filter((p) => p.category === "Coconut Chips" || p.category === "Coconut Water");
+      } else if (filterGroup === "juices" || filterGroup === "pantry") {
+        list = data.products.filter((p) => p.category === "Cold-Pressed Juices");
+      } else if (filterGroup === "shakes-coolers" || filterGroup === "snacks-drinks") {
+        list = data.products.filter((p) => p.category === "Malai Shakes & Smoothies" || p.category === "Coolers & Detox");
       } else {
         list = data.products.slice(0, 8);
       }
@@ -448,7 +448,7 @@
     let currentImgIndex = 0;
     const galleryImages = product.gallery && product.gallery.length ? product.gallery : [product.image];
 
-    document.title = `${product.name} | COCOAURA — Pure Coconut. Naturally Better.`;
+    document.title = `${product.name} | Tender Coconut`;
 
     const bcCategory = document.getElementById("pdp-breadcrumb-category");
     const bcName = document.getElementById("pdp-breadcrumb-name");
@@ -778,7 +778,7 @@
           `;
         }
         contactForm.reset();
-        app.showToast("Your message has been sent to COCOAURA Customer Care.");
+        app.showToast("Your message has been sent to our Stall Management Team.");
       });
     }
 
@@ -833,13 +833,13 @@
             <div style="width:64px; height:64px; border-radius:50%; background:var(--color-secondary); color:var(--color-primary); display:inline-flex; align-items:center; justify-content:center; margin-bottom:1.25rem;">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             </div>
-            <h2 class="heading-lg" style="margin-bottom:0.65rem;">Your COCOAURA Cart is Empty</h2>
+            <h2 class="heading-lg" style="margin-bottom:0.65rem;">Your Stall Cart is Empty</h2>
             <p style="color:var(--color-text-muted); margin-bottom:1.75rem;">
-              Explore our single-origin Raw Virgin Coconut Oil, Cold-Pressed pantry oils, sulfite-free Desiccated Coconut, and Hearth-Toasted Chips.
+              Explore our freshly cut green tender coconuts, 100% pure cold-pressed fruit juices, velvety malai shakes, and chilled fruit coolers.
             </p>
             <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.85rem;">
-              <a href="shop.html" class="btn btn-primary">Explore All Products</a>
-              <button type="button" class="btn btn-outline" id="load-sample-cart-btn">Add Flagship Tasting Trio</button>
+              <a href="shop.html" class="btn btn-primary">Explore Full Stall Menu</a>
+              <button type="button" class="btn btn-outline" id="load-sample-cart-btn">Add Stall Favorite Trio</button>
             </div>
           </div>
         `;
@@ -918,7 +918,7 @@
             <!-- Discount Code Demo Box -->
             <form id="cart-discount-form" style="margin-bottom:1.25rem; padding-bottom:1.25rem; border-bottom:1px solid var(--color-border-subtle);">
               <label for="cart-promo-input" class="form-label" style="display:block; margin-bottom:0.4rem;">
-                Promo Code <span style="font-weight:400; color:var(--color-text-light);">(Try <code>COCOAURA10</code> or <code>PURE15</code>)</span>
+                Promo Code <span style="font-weight:400; color:var(--color-text-light);">(Try <code>FRESH10</code> or <code>STALL15</code>)</span>
               </label>
               <div style="display:flex; gap:0.5rem;">
                 <input type="text" id="cart-promo-input" class="form-control" placeholder="Enter code" value="${discountCode}" style="padding:0.6rem 0.85rem;">
@@ -1013,10 +1013,10 @@
       }
 
       if (e.target.id === "load-sample-cart-btn") {
-        app.addToCart("vco-raw-glass", "500 ml", 1, true);
-        app.addToCart("chips-golden-toasted", "250 g", 1, true);
-        app.addToCart("water-tender-glass", "6 × 330 ml", 1, true);
-        app.showToast("Added Flagship Coconut Tasting Trio to your cart!");
+        app.addToCart("vco-raw-glass", "Regular Green (350ml)", 1, true);
+        app.addToCart("chips-golden-toasted", "Tall Glass (350 ml)", 1, true);
+        app.addToCart("water-tender-glass", "Single Bottle (330 ml)", 1, true);
+        app.showToast("Added Stall Favorite Trio to your cart!");
         renderCartView();
       }
     });
@@ -1036,11 +1036,11 @@
         e.preventDefault();
         const inp = document.getElementById("cart-promo-input");
         const code = (inp ? inp.value : "").trim().toUpperCase();
-        if (code === "COCOAURA10" || code === "PURE15" || code === "TROPICAL20") {
+        if (code === "FRESH10" || code === "STALL15" || code === "COCONUT20" || code === "JUICE15" || code === "COCOAURA10" || code === "PURE15" || code === "TROPICAL20") {
           app.setDiscountCode(code);
           app.showToast(`Applied discount code ${code}!`);
         } else {
-          app.showToast("Invalid demo code. Try COCOAURA10 or PURE15.");
+          app.showToast("Invalid promo code. Try FRESH10 or STALL15.");
         }
         renderCartView();
       }
@@ -1232,7 +1232,7 @@
             </div>
 
             <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
-              <a href="shop.html" class="btn btn-primary">Continue Exploring COCOAURA</a>
+              <a href="shop.html" class="btn btn-primary">Continue Exploring Stall Menu</a>
               <a href="index.html" class="btn btn-outline">Return to Homepage</a>
             </div>
           </div>

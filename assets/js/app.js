@@ -1,8 +1,8 @@
 /* ==========================================================================
-   COCOAURA — Global Ecommerce Application Controller (app.js)
+   Tender Coconut & Fresh Juice Stall — Global Application Controller (app.js)
    Handles: Theme, Sticky Navbar, Dropdowns, Mobile Drawer, Search Modal,
    Wishlist Persistence & Drawer, Cart Persistence, Toast Notifications,
-   Reusable Product Cards, and Newsletter Subscription.
+   Reusable Drink Cards, and Newsletter Subscription.
    ========================================================================== */
 
 (function () {
@@ -207,9 +207,9 @@
 
     const code = getDiscountCode();
     let discountRate = 0;
-    if (code === "COCOAURA10") discountRate = 0.10;
-    else if (code === "PURE15") discountRate = 0.15;
-    else if (code === "TROPICAL20") discountRate = 0.20;
+    if (code === "FRESH10" || code === "COCOAURA10") discountRate = 0.10;
+    else if (code === "STALL15" || code === "JUICE15" || code === "PURE15") discountRate = 0.15;
+    else if (code === "COCONUT20" || code === "TROPICAL20") discountRate = 0.20;
 
     const discountAmount = subtotal * discountRate;
     const afterDiscount = Math.max(0, subtotal - discountAmount);
@@ -379,11 +379,11 @@
       headerMount.innerHTML = `
         <header class="site-header" id="site-header">
           <div class="container navbar-container">
-            <a href="index.html" class="brand-logo" aria-label="COCOAURA Home">
+            <a href="index.html" class="brand-logo" aria-label="Tender Coconut Home">
               <span class="brand-logo-mark" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 15a5 5 0 1 1 5-5 5 5 0 0 1-5 5z"/><path d="M12 2v5"/><path d="m16.24 7.76 3.54-3.54"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14c0 4.5 3.5 7.5 8 7.5s8-3 8-7.5c0-1.5-.5-3-1.5-4C17 7.5 14.5 7 12 7s-5 .5-6.5 3C4.5 11 4 12.5 4 14z"/><ellipse cx="12" cy="11" rx="6" ry="3"/><path d="M14 11l5-8"/><path d="M7 6c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8-1.8-3-1.8-3-1.8 2-1.8 3z"/></svg>
               </span>
-              <span>COCOAURA</span>
+              <span>Tender Coconut</span>
             </a>
 
             <nav class="primary-nav" aria-label="Primary Navigation">
@@ -406,29 +406,31 @@
 
               <div class="nav-item has-dropdown">
                 <a href="shop.html" class="nav-link ${isShopGroup ? "active" : ""}" aria-haspopup="true">
-                  <span>Shop</span>
+                  <span>Menu</span>
                   <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
                 </a>
-                <div class="dropdown-menu" role="menu" aria-label="Shop categories">
+                <div class="dropdown-menu" role="menu" aria-label="Stall categories">
                   <a href="shop.html" class="dropdown-link" role="menuitem">
-                    <span>All Products</span>
+                    <span>All Drinks &amp; Coconuts</span>
                     <span class="dropdown-meta">10 Items</span>
                   </a>
-                  <a href="shop.html?category=Virgin+Coconut+Oil" class="dropdown-link" role="menuitem">
-                    <span>Virgin Coconut Oil</span>
-                    <span class="dropdown-meta">Flagship</span>
+                  <a href="shop.html?category=Tender+Coconuts" class="dropdown-link" role="menuitem">
+                    <span>Tender Coconuts</span>
+                    <span class="dropdown-meta">Live Cut</span>
                   </a>
-                  <a href="shop.html?category=Cold-Pressed+Coconut+Oil" class="dropdown-link" role="menuitem">
-                    <span>Cold-Pressed Coconut Oil</span>
+                  <a href="shop.html?category=Cold-Pressed+Juices" class="dropdown-link" role="menuitem">
+                    <span>Cold-Pressed Juices</span>
+                    <span class="dropdown-meta">100% Pure</span>
                   </a>
-                  <a href="shop.html?category=Desiccated+Coconut" class="dropdown-link" role="menuitem">
-                    <span>Desiccated Coconut</span>
+                  <a href="shop.html?category=Malai+Shakes+%26+Smoothies" class="dropdown-link" role="menuitem">
+                    <span>Malai Shakes &amp; Smoothies</span>
+                    <span class="dropdown-meta">House Specialty</span>
                   </a>
-                  <a href="shop.html?category=Coconut+Chips" class="dropdown-link" role="menuitem">
-                    <span>Coconut Chips</span>
+                  <a href="shop.html?category=Coolers+%26+Detox" class="dropdown-link" role="menuitem">
+                    <span>Coolers &amp; Detox</span>
                   </a>
-                  <a href="shop.html?category=Coconut+Water" class="dropdown-link" role="menuitem">
-                    <span>Coconut Water</span>
+                  <a href="shop.html?category=Bottled+Coconut+Water" class="dropdown-link" role="menuitem">
+                    <span>Bottled Coconut Water</span>
                   </a>
                 </div>
               </div>
@@ -451,16 +453,16 @@
             </nav>
 
             <div class="navbar-actions">
-              <button type="button" class="icon-btn" data-open-search aria-label="Search products" title="Search Products">
+              <button type="button" class="icon-btn" data-open-search aria-label="Search drinks and coconuts" title="Search Menu">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
               </button>
 
-              <button type="button" class="icon-btn" data-open-wishlist aria-label="Open wishlist" title="Saved Wishlist">
+              <button type="button" class="icon-btn" data-open-wishlist aria-label="Open saved items" title="Saved Favorites">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                 <span class="count-badge" data-wishlist-count>0</span>
               </button>
 
-              <a href="cart.html" class="icon-btn" aria-label="Shopping cart" title="View Shopping Cart">
+              <a href="cart.html" class="icon-btn" aria-label="View stall cart" title="Stall Cart">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                 <span class="count-badge" data-cart-count>0</span>
               </a>
@@ -469,7 +471,7 @@
 
               <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle color theme"></button>
 
-              <a href="shop.html" class="btn btn-primary btn-sm nav-cta-btn">Shop Now</a>
+              <a href="shop.html" class="btn btn-primary btn-sm nav-cta-btn">Order Fresh</a>
 
               <button type="button" class="icon-btn mobile-menu-toggle" data-open-mobile-menu aria-label="Open navigation menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -482,11 +484,11 @@
         <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
         <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
           <div class="mobile-drawer-header">
-            <a href="index.html" class="brand-logo" aria-label="COCOAURA Home">
+            <a href="index.html" class="brand-logo" aria-label="Tender Coconut Home">
               <span class="brand-logo-mark" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 15a5 5 0 1 1 5-5 5 5 0 0 1-5 5z"/><path d="M12 2v5"/><path d="m16.24 7.76 3.54-3.54"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14c0 4.5 3.5 7.5 8 7.5s8-3 8-7.5c0-1.5-.5-3-1.5-4C17 7.5 14.5 7 12 7s-5 .5-6.5 3C4.5 11 4 12.5 4 14z"/><ellipse cx="12" cy="11" rx="6" ry="3"/><path d="M14 11l5-8"/><path d="M7 6c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8-1.8-3-1.8-3-1.8 2-1.8 3z"/></svg>
               </span>
-              <span>COCOAURA</span>
+              <span>Tender Coconut</span>
             </a>
             <button type="button" class="icon-btn" data-close-mobile-menu aria-label="Close navigation menu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
@@ -495,16 +497,16 @@
 
           <!-- Header Action Buttons moved inside menu page -->
           <div class="mobile-drawer-actions">
-            <button type="button" class="icon-btn" data-open-search aria-label="Search products" title="Search Products">
+            <button type="button" class="icon-btn" data-open-search aria-label="Search drinks" title="Search Menu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
             </button>
 
-            <button type="button" class="icon-btn" data-open-wishlist aria-label="Open wishlist" title="Saved Wishlist">
+            <button type="button" class="icon-btn" data-open-wishlist aria-label="Open saved items" title="Saved Favorites">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
               <span class="count-badge" data-wishlist-count>0</span>
             </button>
 
-            <a href="cart.html" class="icon-btn" aria-label="Shopping cart" title="View Shopping Cart">
+            <a href="cart.html" class="icon-btn" aria-label="View stall cart" title="Stall Cart">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
               <span class="count-badge" data-cart-count>0</span>
             </a>
@@ -528,16 +530,16 @@
 
             <div class="mobile-nav-group">
               <button type="button" class="mobile-nav-trigger is-expanded" data-mobile-accordion="shop-sub" aria-expanded="true">
-                <span>Shop</span>
+                <span>Menu</span>
                 <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
               </button>
               <div class="mobile-subnav is-open" id="shop-sub">
-                <a href="shop.html" class="${path === "shop.html" && !hash ? "active" : ""}">All Products</a>
-                <a href="shop.html?category=Virgin+Coconut+Oil">Virgin Coconut Oil</a>
-                <a href="shop.html?category=Cold-Pressed+Coconut+Oil">Cold-Pressed Coconut Oil</a>
-                <a href="shop.html?category=Desiccated+Coconut">Desiccated Coconut</a>
-                <a href="shop.html?category=Coconut+Chips">Coconut Chips</a>
-                <a href="shop.html?category=Coconut+Water">Coconut Water</a>
+                <a href="shop.html" class="${path === "shop.html" && !hash ? "active" : ""}">All Drinks &amp; Coconuts</a>
+                <a href="shop.html?category=Tender+Coconuts">Tender Coconuts</a>
+                <a href="shop.html?category=Cold-Pressed+Juices">Cold-Pressed Juices</a>
+                <a href="shop.html?category=Malai+Shakes+%26+Smoothies">Malai Shakes &amp; Smoothies</a>
+                <a href="shop.html?category=Coolers+%26+Detox">Coolers &amp; Detox</a>
+                <a href="shop.html?category=Bottled+Coconut+Water">Bottled Coconut Water</a>
               </div>
             </div>
 
@@ -555,8 +557,8 @@
             </div>
           </div>
           <div class="mobile-drawer-footer">
-            <a href="shop.html" class="btn btn-primary btn-block">Shop Now</a>
-            <a href="contact-bulk-enquiry.html#bulk-enquiry" class="btn btn-outline btn-block">Request Bulk Pricing</a>
+            <a href="shop.html" class="btn btn-primary btn-block">Order Fresh</a>
+            <a href="contact-bulk-enquiry.html#bulk-enquiry" class="btn btn-outline btn-block">Book Live Stall for Events</a>
           </div>
         </aside>
       `;
@@ -567,23 +569,23 @@
       const modalsWrapper = document.createElement("div");
       modalsWrapper.innerHTML = `
         <!-- Search Modal -->
-        <div class="modal-overlay" id="search-modal-overlay" role="dialog" aria-modal="true" aria-label="Search COCOAURA Products">
+        <div class="modal-overlay" id="search-modal-overlay" role="dialog" aria-modal="true" aria-label="Search Tender Coconut &amp; Fresh Juices">
           <div class="search-modal">
             <div class="search-modal-header">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-              <input type="search" id="global-search-input" class="search-modal-input" placeholder="Search Virgin Coconut Oil, Desiccated, Chips, Water..." autocomplete="off" aria-label="Search products">
+              <input type="search" id="global-search-input" class="search-modal-input" placeholder="Search Green Coconut, Sugarcane, Orange, Malai Shake, Water..." autocomplete="off" aria-label="Search menu">
               <button type="button" class="icon-btn" data-close-search aria-label="Close search">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
               </button>
             </div>
             <div class="search-modal-body">
               <div class="search-quick-tags">
-                <button type="button" class="search-tag" data-search-tag="Virgin Coconut Oil">Virgin Coconut Oil</button>
-                <button type="button" class="search-tag" data-search-tag="Cold-Pressed">Cold-Pressed</button>
-                <button type="button" class="search-tag" data-search-tag="Desiccated">Desiccated Coconut</button>
-                <button type="button" class="search-tag" data-search-tag="Chips">Coconut Chips</button>
+                <button type="button" class="search-tag" data-search-tag="Tender Coconuts">Tender Coconuts</button>
+                <button type="button" class="search-tag" data-search-tag="Sugarcane">Sugarcane Juice</button>
+                <button type="button" class="search-tag" data-search-tag="Orange">Valencia Orange</button>
+                <button type="button" class="search-tag" data-search-tag="Malai Shake">Malai Shake</button>
                 <button type="button" class="search-tag" data-search-tag="Water">Coconut Water</button>
-                <button type="button" class="search-tag" data-search-tag="Cream">Coconut Cream</button>
+                <button type="button" class="search-tag" data-search-tag="Pomegranate">Pomegranate</button>
               </div>
               <div id="global-search-results"></div>
             </div>
@@ -592,16 +594,16 @@
 
         <!-- Wishlist Drawer -->
         <div class="mobile-drawer-backdrop" id="wishlist-backdrop"></div>
-        <aside class="wishlist-drawer" id="wishlist-drawer" aria-label="Saved Wishlist Items">
+        <aside class="wishlist-drawer" id="wishlist-drawer" aria-label="Saved Stall Favorites">
           <div class="mobile-drawer-header">
-            <h3 class="heading-sm" style="margin:0;">Saved Coconut Favorites</h3>
-            <button type="button" class="icon-btn" data-close-wishlist aria-label="Close wishlist">
+            <h3 class="heading-sm" style="margin:0;">Saved Stall Favorites</h3>
+            <button type="button" class="icon-btn" data-close-wishlist aria-label="Close saved items">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
             </button>
           </div>
           <div class="mobile-drawer-body" id="wishlist-drawer-items"></div>
           <div class="mobile-drawer-footer">
-            <a href="shop.html" class="btn btn-primary btn-block">Explore Full Collection</a>
+            <a href="shop.html" class="btn btn-primary btn-block">Explore Full Stall Menu</a>
           </div>
         </aside>
       `;
@@ -616,10 +618,10 @@
           <div class="container">
             <div class="footer-newsletter-band">
               <div>
-                <span class="eyebrow footer-eyebrow">The Grove Journal &amp; Harvest Releases</span>
-                <h3>Pure Coconut. Naturally Better.</h3>
+                <span class="eyebrow footer-eyebrow">Daily Farm-Fresh Harvest &amp; Stall Updates</span>
+                <h3>Pure Hydration. Naturally Chilled.</h3>
                 <p style="font-size: 0.95rem;">
-                  Subscribe for seasonal single-origin harvest notes, culinary coconut recipes, and early access to small-batch pressings.
+                  Subscribe for morning harvest alerts, seasonal tropical juice drops, weekend stall specials, and live catering discounts.
                 </p>
               </div>
               <form class="newsletter-form" data-newsletter-form novalidate>
@@ -630,44 +632,44 @@
             </div>
 
             <div class="footer-grid">
-              <!-- Column 1: COCOAURA -->
+              <!-- Column 1: Brand Info -->
               <div class="footer-col">
-                <a href="index.html" class="brand-logo" aria-label="COCOAURA Home">
+                <a href="index.html" class="brand-logo" aria-label="Tender Coconut Home">
                   <span class="brand-logo-mark" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 15a5 5 0 1 1 5-5 5 5 0 0 1-5 5z"/><path d="M12 2v5"/><path d="m16.24 7.76 3.54-3.54"/></svg>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14c0 4.5 3.5 7.5 8 7.5s8-3 8-7.5c0-1.5-.5-3-1.5-4C17 7.5 14.5 7 12 7s-5 .5-6.5 3C4.5 11 4 12.5 4 14z"/><ellipse cx="12" cy="11" rx="6" ry="3"/><path d="M14 11l5-8"/><path d="M7 6c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8-1.8-3-1.8-3-1.8 2-1.8 3z"/></svg>
                   </span>
-                  <span>COCOAURA</span>
+                  <span>Tender Coconut</span>
                 </a>
                 <p style="font-size: 0.9rem; margin-bottom: 1rem;">
-                  Artisanal virgin coconut oils, cold-pressed pantry staples, sulfite-free desiccated cuts, and tender coconut water crafted with tropical authenticity.
+                  Farm-fresh green tender coconuts cut live, 100% pure cold-pressed fruit juices, velvety malai shakes, and live stall catering for weddings and celebrations.
                 </p>
                 <div class="demo-info" style="font-size: 0.82rem; line-height: 1.6;">
-                  <div><strong>Demo Studio Address:</strong> 420 Coastal Palm Way, Suite 200, Honolulu, HI 96813 (Sample Info)</div>
-                  <div><strong>Enquiries:</strong> hello@cocoaura-demo.example · +1 (808) 555-0194</div>
+                  <div><strong>Live Stall Location:</strong> Stall #4, Coastal Promenade &amp; Palm Beach Avenue (Sample Info)</div>
+                  <div><strong>Enquiries:</strong> hello@tendercoconut-juice.example · +91 98200 55123 / +1 (808) 555-0194</div>
                 </div>
                 <div class="social-links" aria-label="Social Media Links">
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="COCOAURA on Instagram">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
                   </a>
-                  <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="COCOAURA on Pinterest">
+                  <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Pinterest">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 20l4-9"/><path d="M10.7 14c.437 1.263 1.43 2 2.55 2 2.071 0 3.75-1.554 3.75-4a5 5 0 1 0-9.7 1.7"/></svg>
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="COCOAURA Wholesale on LinkedIn">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Catering Enquiries on LinkedIn">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                   </a>
                 </div>
               </div>
 
-              <!-- Column 2: Shop -->
+              <!-- Column 2: Fresh Stall Menu -->
               <div class="footer-col">
-                <h4>Shop</h4>
+                <h4>Fresh Stall Menu</h4>
                 <ul class="footer-links">
-                  <li><a href="shop.html?category=Virgin+Coconut+Oil">Virgin Coconut Oil</a></li>
-                  <li><a href="shop.html?category=Cold-Pressed+Coconut+Oil">Cold-Pressed Coconut Oil</a></li>
-                  <li><a href="shop.html?category=Desiccated+Coconut">Desiccated Coconut</a></li>
-                  <li><a href="shop.html?category=Coconut+Chips">Coconut Chips</a></li>
-                  <li><a href="shop.html?category=Coconut+Water">Coconut Water</a></li>
-                  <li><a href="shop.html">All Coconut Products</a></li>
+                  <li><a href="shop.html?category=Tender+Coconuts">Tender Coconuts</a></li>
+                  <li><a href="shop.html?category=Cold-Pressed+Juices">Cold-Pressed Juices</a></li>
+                  <li><a href="shop.html?category=Malai+Shakes+%26+Smoothies">Malai Shakes &amp; Smoothies</a></li>
+                  <li><a href="shop.html?category=Coolers+%26+Detox">Coolers &amp; Detox</a></li>
+                  <li><a href="shop.html?category=Bottled+Coconut+Water">Bottled Coconut Water</a></li>
+                  <li><a href="shop.html">Full Stall Menu (10 Items)</a></li>
                 </ul>
               </div>
 
@@ -675,32 +677,32 @@
               <div class="footer-col">
                 <h4>Our Story</h4>
                 <ul class="footer-links">
-                  <li><a href="our-story.html">About COCOAURA</a></li>
-                  <li><a href="sourcing.html">Sourcing &amp; Groves</a></li>
-                  <li><a href="sourcing.html#quality-process">Quality &amp; Process</a></li>
-                  <li><a href="sourcing.html#production-gallery">Production Gallery</a></li>
-                  <li><a href="blog.html">The Grove Journal &amp; Blog</a></li>
+                  <li><a href="our-story.html">About Our Stall</a></li>
+                  <li><a href="sourcing.html">Coastal Grove Sourcing</a></li>
+                  <li><a href="sourcing.html#quality-process">Live Cutting &amp; Cold-Press</a></li>
+                  <li><a href="sourcing.html#production-gallery">Stall &amp; Orchard Gallery</a></li>
+                  <li><a href="blog.html">The Fresh Stall Blog</a></li>
                   <li><a href="home-2.html">Home-2 Editorial Atelier</a></li>
                 </ul>
               </div>
 
-              <!-- Column 4: Customer Support -->
+              <!-- Column 4: Stall Services & Catering -->
               <div class="footer-col">
-                <h4>Customer Support</h4>
+                <h4>Stall Services</h4>
                 <ul class="footer-links">
-                  <li><a href="contact-bulk-enquiry.html">Contact Us</a></li>
-                  <li><a href="contact-bulk-enquiry.html#bulk-enquiry">Wholesale &amp; Bulk Enquiry</a></li>
-                  <li><a href="contact-bulk-enquiry.html#faqs">FAQs</a></li>
-                  <li><a href="contact-bulk-enquiry.html#shipping-returns">Shipping &amp; Delivery</a></li>
-                  <li><a href="contact-bulk-enquiry.html#shipping-returns">Returns &amp; Replacements</a></li>
-                  <li><a href="contact-bulk-enquiry.html#policies">Privacy Policy &amp; Terms</a></li>
+                  <li><a href="contact-bulk-enquiry.html">Visit &amp; Contact Stall</a></li>
+                  <li><a href="contact-bulk-enquiry.html#bulk-enquiry">Wedding &amp; Event Stall Bookings</a></li>
+                  <li><a href="contact-bulk-enquiry.html#faqs">Stall FAQs</a></li>
+                  <li><a href="contact-bulk-enquiry.html#shipping-returns">Pickup &amp; Fast Delivery</a></li>
+                  <li><a href="contact-bulk-enquiry.html#shipping-returns">Hygiene &amp; Safety Standards</a></li>
+                  <li><a href="contact-bulk-enquiry.html#policies">Privacy &amp; Terms</a></li>
                 </ul>
               </div>
             </div>
 
             <div class="footer-bottom">
-              <div>© ${new Date().getFullYear()} COCOAURA Botanicals LLC. All rights reserved. “Pure Coconut. Naturally Better.”</div>
-              <div>Demo Commercial Ecommerce Template · Sample Product &amp; Contact Data</div>
+              <div>© ${new Date().getFullYear()} Tender Coconut. All rights reserved. “Pure Hydration. Naturally Chilled.”</div>
+              <div>Fresh Local Juicery &amp; Event Catering · Sample Stall &amp; Contact Data</div>
             </div>
           </div>
         </footer>
@@ -736,8 +738,8 @@
     if (matches.length === 0) {
       container.innerHTML = `
         <div style="text-align:center; padding: 2rem 1rem; color: var(--color-text-muted);">
-          <p style="margin-bottom:0.75rem;">No coconut products matched "<strong>${query}</strong>".</p>
-          <a href="shop.html" class="btn btn-outline btn-sm">Browse All Products</a>
+          <p style="margin-bottom:0.75rem;">No drinks or coconuts matched "<strong>${query}</strong>".</p>
+          <a href="shop.html" class="btn btn-outline btn-sm">Browse Full Stall Menu</a>
         </div>
       `;
       return;
@@ -745,7 +747,7 @@
 
     container.innerHTML = `
       <div style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-light); margin-bottom: 0.65rem; font-weight: 700;">
-        ${q ? `Matching Products (${matches.length})` : "Popular Coconut Staples"}
+        ${q ? `Matching Drinks (${matches.length})` : "Popular Stall Refreshers"}
       </div>
       <div style="display:flex; flex-direction:column; gap:0.35rem;">
         ${matches
@@ -814,7 +816,7 @@
     const onScroll = () => {
       const header = document.getElementById("site-header");
       if (header) {
-        header.classList.toggle("is-scrolled", window.scrollY > 24);
+        header.classList.toggle("is-scrolled", window.scrollY > 15);
       }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -970,7 +972,7 @@
         emailInput.classList.remove("is-invalid");
         emailInput.value = "";
       }
-      showToast("Welcome to COCOAURA! You are subscribed to The Grove Journal.");
+      showToast("Welcome to Tender Coconut! You are subscribed to our daily fresh alerts.");
     });
   }
 
@@ -997,6 +999,7 @@
     updateCartBadges,
     applyDirection
   };
+  window.STALL_APP = window.COCOAURA_APP;
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {

@@ -1,6 +1,6 @@
 /* ==========================================================================
-   COCOAURA — "Pure Coconut. Naturally Better."
-   Premium Organic & Tropical Coconut Ecommerce Design System
+   Tender Coconut & Fresh Juice Stall — "Freshly Decapped. 100% Raw Juice."
+   Artisanal Fresh Juicery, Raw Tender Coconuts & Smoothies Design System
    Typography: DM Serif Display & DM Sans
    ========================================================================== */
 
@@ -103,7 +103,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 20px);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -113,7 +113,7 @@ body {
   line-height: 1.65;
   color: var(--color-text);
   background-color: var(--color-bg);
-  overflow-x: hidden;
+  overflow-x: clip;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -612,36 +612,35 @@ select.form-control {
   }
 }
 
-/* Site Header / Navbar */
-.site-header {
-  position: sticky;
-  top: 0;
+/* Site Header / Navbar Mount */
+#site-header-mount {
+  min-height: var(--header-height);
+  position: relative;
   z-index: 1000;
   width: 100%;
+}
+
+/* Site Header / Navbar — Persistent Fixed on Scroll */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   height: var(--header-height);
+  z-index: 1000;
   background-color: var(--color-header-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--color-border-subtle);
-  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), background-color var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, background-color, box-shadow;
 }
 
 .site-header.is-scrolled {
   background-color: var(--color-header-solid);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
   border-bottom-color: var(--color-border);
-  animation: navbarComeDown 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes navbarComeDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0.9;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .navbar-container {
@@ -1528,46 +1527,85 @@ select.form-control {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(16, 32, 23, 0.88) 0%, rgba(16, 32, 23, 0.35) 55%, rgba(16, 32, 23, 0.08) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 20, 14, 0.05) 0%,
+    rgba(8, 20, 14, 0.25) 30%,
+    rgba(8, 20, 14, 0.75) 55%,
+    rgba(8, 20, 14, 0.94) 80%,
+    rgba(6, 16, 11, 0.98) 100%
+  );
   z-index: -1;
+  transition: background 0.3s ease;
 }
 
-.category-card:hover img {
-  transform: scale(1.06);
+.category-card:hover::after {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 20, 14, 0.10) 0%,
+    rgba(8, 20, 14, 0.35) 30%,
+    rgba(8, 20, 14, 0.85) 55%,
+    rgba(8, 20, 14, 0.97) 80%,
+    rgba(6, 16, 11, 0.99) 100%
+  );
 }
 
 .category-card-tag {
-  font-size: 0.74rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #E2B86B;
+  letter-spacing: 0.14em;
+  color: #FFE082;
   font-weight: 700;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(10, 26, 18, 0.78);
+  border: 1px solid rgba(255, 224, 130, 0.4);
+  border-radius: var(--radius-pill);
+  align-self: flex-start;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
 }
 
 .category-card-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: #FAF8F4;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
   margin-bottom: 0.45rem;
+  line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
 .category-card-desc {
-  font-size: 0.86rem;
-  color: rgba(250, 248, 244, 0.84);
-  margin-bottom: 1rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #F8F9FA;
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
 }
 
 .category-card-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #FAF8F4;
-  padding-bottom: 2px;
-  border-bottom: 1.5px solid #D4A359;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFE082;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #FFE082;
   align-self: flex-start;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  transition: gap var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.category-card:hover .category-card-link {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  gap: 0.75rem;
 }
 
 /* ==========================================================================
@@ -1784,7 +1822,7 @@ select.form-control {
   }
 }
 
-/* Why Choose COCOAURA Pillars */
+/* Why Choose Stall Pillars */
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

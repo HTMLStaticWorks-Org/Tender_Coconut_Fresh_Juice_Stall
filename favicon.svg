@@ -1,9 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-  <circle cx="18" cy="18" r="18" fill="#1F3F2E"/>
-  <g transform="translate(6, 6)" fill="none" stroke="#FAF8F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 15a5 5 0 1 1 5-5 5 5 0 0 1-5 5z"/>
-    <path d="M12 2v5"/>
-    <path d="m16.24 7.76 3.54-3.54"/>
+  <circle cx="18" cy="18" r="18" fill="#1B4332"/>
+  <g transform="translate(6, 6)" fill="none" stroke="#FAF8F4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Tender Coconut Bowl -->
+    <path d="M4 14c0 5 3.5 8 8 8s8-3 8-8c0-1.5-.5-3-1.5-4C17 6.5 14.5 6 12 6s-5 .5-6.5 2C4.5 11 4 12.5 4 14z" fill="#2D6A4F" stroke="#FAF8F4"/>
+    <!-- Coconut Water Surface / Meat -->
+    <ellipse cx="12" cy="11" rx="6.5" ry="3.5" fill="#FAF8F4" fill-opacity="0.25" stroke="#FAF8F4"/>
+    <!-- Fresh Eco Straw -->
+    <path d="M14 11l5-8" stroke="#D4A359" stroke-width="2.2"/>
+    <path d="M19 3l2-1" stroke="#D4A359" stroke-width="2.2"/>
+    <!-- Splash / Juice Droplet -->
+    <path d="M7 6c0 1.2.9 2 2 2s2-.8 2-2-2-3-2-3-2 1.8-2 3z" fill="#D4A359" stroke="none"/>
   </g>
 </svg>
-

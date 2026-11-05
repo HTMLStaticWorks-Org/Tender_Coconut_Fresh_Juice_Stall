@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout | COCOAURA — Pure Coconut. Naturally Better.</title>
-  <meta name="description" content="Complete your COCOAURA coconut order with shipping, billing, delivery, and payment selection.">
+  <title>Checkout | Tender Coconut</title>
+  <meta name="description" content="Complete your Tender Coconut & Fresh Juice Stall order with delivery details, local address, and payment selection.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -23,14 +23,14 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Home</a>
           <span>/</span>
-          <a href="cart.html">Shopping Cart</a>
+          <a href="cart.html">Stall Cart</a>
           <span>/</span>
           <span aria-current="page">Checkout</span>
         </nav>
 
         <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:1rem;">
           <div>
-            <span class="eyebrow">Frontend Ecommerce Demonstration</span>
+            <span class="eyebrow">Fresh Order Confirmation</span>
             <h1 class="display-lg" id="checkout-page-title">Secure Checkout</h1>
           </div>
           <span class="badge badge-outline">Demo Checkout · No Real Payment Charged</span>
@@ -42,7 +42,7 @@
     <section class="section-padding" aria-label="Checkout Form and Order Summary">
       <div class="container" id="checkout-page-mount">
         <form id="checkout-form" class="cart-layout" novalidate>
-          <!-- Left Column: Customer, Shipping, Billing, Delivery & Payment -->
+          <!-- Left Column: Customer, Delivery Address, Method & Payment -->
           <div style="display:flex; flex-direction:column; gap:1.75rem;">
             <!-- 1. Customer Information -->
             <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.75rem;">
@@ -68,48 +68,48 @@
                 </div>
                 <div class="form-group" style="margin-bottom:0;">
                   <label for="chk-phone" class="form-label">Phone Number <span class="required">*</span></label>
-                  <input type="tel" id="chk-phone" name="phone" class="form-control" placeholder="+1 (555) 392-8410" required>
-                  <span class="form-error">Phone number is required for delivery updates.</span>
+                  <input type="tel" id="chk-phone" name="phone" class="form-control" placeholder="+91 98200 12345" required>
+                  <span class="form-error">Phone number is required for delivery rider updates.</span>
                 </div>
               </div>
             </div>
 
-            <!-- 2. Shipping Address -->
+            <!-- 2. Delivery Address -->
             <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.75rem;">
-              <h2 class="heading-md" style="margin-bottom:1.15rem;">2. Shipping Address</h2>
+              <h2 class="heading-md" style="margin-bottom:1.15rem;">2. Delivery Address</h2>
               <div class="form-group">
                 <label for="chk-address" class="form-label">Street Address <span class="required">*</span></label>
-                <input type="text" id="chk-address" name="address" class="form-control" placeholder="742 Banyan Terrace, Apt 4B" required>
+                <input type="text" id="chk-address" name="address" class="form-control" placeholder="742 Coastal Promenade, Apt 4B" required>
                 <span class="form-error">Street address is required.</span>
               </div>
 
               <div class="form-row-2">
                 <div class="form-group">
                   <label for="chk-city" class="form-label">City <span class="required">*</span></label>
-                  <input type="text" id="chk-city" name="city" class="form-control" placeholder="San Diego" required>
+                  <input type="text" id="chk-city" name="city" class="form-control" placeholder="Mumbai / Honolulu" required>
                   <span class="form-error">City is required.</span>
                 </div>
                 <div class="form-group">
-                  <label for="chk-state" class="form-label">State / Province <span class="required">*</span></label>
-                  <input type="text" id="chk-state" name="state" class="form-control" placeholder="CA" required>
-                  <span class="form-error">State or province is required.</span>
+                  <label for="chk-state" class="form-label">State / Region <span class="required">*</span></label>
+                  <input type="text" id="chk-state" name="state" class="form-control" placeholder="Maharashtra / HI" required>
+                  <span class="form-error">State or region is required.</span>
                 </div>
               </div>
 
               <div class="form-row-2">
                 <div class="form-group" style="margin-bottom:0;">
-                  <label for="chk-zip" class="form-label">Postal / ZIP Code <span class="required">*</span></label>
-                  <input type="text" id="chk-zip" name="postalCode" class="form-control" placeholder="92101" required>
-                  <span class="form-error">Postal/ZIP code is required.</span>
+                  <label for="chk-zip" class="form-label">Postal / PIN Code <span class="required">*</span></label>
+                  <input type="text" id="chk-zip" name="postalCode" class="form-control" placeholder="400050" required>
+                  <span class="form-error">Postal/PIN code is required.</span>
                 </div>
                 <div class="form-group" style="margin-bottom:0;">
                   <label for="chk-country" class="form-label">Country <span class="required">*</span></label>
                   <select id="chk-country" name="country" class="form-control" required>
+                    <option value="India">India</option>
                     <option value="United States">United States</option>
-                    <option value="Canada">Canada</option>
                     <option value="United Kingdom">United Kingdom</option>
-                    <option value="Australia">Australia</option>
                     <option value="Singapore">Singapore</option>
+                    <option value="Australia">Australia</option>
                   </select>
                 </div>
               </div>
@@ -120,7 +120,7 @@
               <h2 class="heading-md" style="margin-bottom:0.85rem;">3. Billing Details</h2>
               <label style="display:flex; align-items:center; gap:0.65rem; font-size:0.94rem; cursor:pointer;">
                 <input type="checkbox" id="billing-same-checkbox" checked style="accent-color:var(--color-primary); width:18px; height:18px;">
-                <span>Billing address is the same as my shipping address</span>
+                <span>Billing address is the same as my delivery address</span>
               </label>
 
               <div id="custom-billing-fields" style="display:none; margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid var(--color-border-subtle);">
@@ -147,10 +147,10 @@
               <div style="display:flex; flex-direction:column; gap:0.85rem;">
                 <label style="display:flex; align-items:center; justify-content:space-between; padding:1rem 1.15rem; border:1.5px solid var(--color-border); border-radius:var(--radius-sm); cursor:pointer;">
                   <div style="display:flex; align-items:center; gap:0.75rem;">
-                    <input type="radio" name="deliveryMethod" value="Standard Ground" data-shipping-cost="0" checked style="accent-color:var(--color-primary); width:18px; height:18px;">
+                    <input type="radio" name="deliveryMethod" value="Standard Chilled Dispatch" data-shipping-cost="0" checked style="accent-color:var(--color-primary); width:18px; height:18px;">
                     <div>
-                      <strong style="display:block; font-size:0.95rem;">Standard Molded-Pulp Ground Shipping</strong>
-                      <span style="font-size:0.82rem; color:var(--color-text-muted);">3–5 business days · Complimentary on orders over $60 ($6.50 under $60)</span>
+                      <strong style="display:block; font-size:0.95rem;">Standard Chilled Local Delivery</strong>
+                      <span style="font-size:0.82rem; color:var(--color-text-muted);">Within 45–60 minutes · Complimentary on orders over $60 ($6.50 under $60)</span>
                     </div>
                   </div>
                   <strong style="font-size:0.9rem;">Standard</strong>
@@ -158,10 +158,10 @@
 
                 <label style="display:flex; align-items:center; justify-content:space-between; padding:1rem 1.15rem; border:1.5px solid var(--color-border); border-radius:var(--radius-sm); cursor:pointer;">
                   <div style="display:flex; align-items:center; gap:0.75rem;">
-                    <input type="radio" name="deliveryMethod" value="Express Climate-Controlled" data-shipping-cost="14.00" style="accent-color:var(--color-primary); width:18px; height:18px;">
+                    <input type="radio" name="deliveryMethod" value="Express Thermal Priority" data-shipping-cost="14.00" style="accent-color:var(--color-primary); width:18px; height:18px;">
                     <div>
-                      <strong style="display:block; font-size:0.95rem;">Express Thermal-Insulated Priority</strong>
-                      <span style="font-size:0.82rem; color:var(--color-text-muted);">1–2 business days · Ideal for warm summer regions</span>
+                      <strong style="display:block; font-size:0.95rem;">Express Ice-Packed Priority Courier</strong>
+                      <span style="font-size:0.82rem; color:var(--color-text-muted);">Under 30 minutes · Packed in thermal cold sleeves with fresh ice</span>
                     </div>
                   </div>
                   <strong style="font-size:0.9rem;">$14.00</strong>
@@ -179,18 +179,18 @@
               <div style="display:flex; flex-direction:column; gap:0.85rem; margin-bottom:1.25rem;">
                 <label style="display:flex; align-items:center; gap:0.75rem; padding:0.9rem 1.15rem; border:1.5px solid var(--color-border); border-radius:var(--radius-sm); cursor:pointer;">
                   <input type="radio" name="paymentMethod" value="Credit / Debit Card (Demo)" checked style="accent-color:var(--color-primary); width:18px; height:18px;">
-                  <strong style="font-size:0.95rem;">Credit / Debit Card (Frontend Demonstration)</strong>
+                  <strong style="font-size:0.95rem;">UPI / Credit Card / Debit Card (Frontend Demo)</strong>
                 </label>
 
                 <label style="display:flex; align-items:center; gap:0.75rem; padding:0.9rem 1.15rem; border:1.5px solid var(--color-border); border-radius:var(--radius-sm); cursor:pointer;">
-                  <input type="radio" name="paymentMethod" value="Direct Bank Transfer (Demo)" style="accent-color:var(--color-primary); width:18px; height:18px;">
-                  <strong style="font-size:0.95rem;">Direct Bank / ACH Transfer (Demo Invoice)</strong>
+                  <input type="radio" name="paymentMethod" value="Cash on Delivery (Demo)" style="accent-color:var(--color-primary); width:18px; height:18px;">
+                  <strong style="font-size:0.95rem;">Cash / QR on Delivery (Stall Rider)</strong>
                 </label>
               </div>
 
               <div id="payment-card-fields" style="padding:1.25rem; background:var(--color-secondary); border-radius:var(--radius-md);">
                 <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:1rem;">
-                  <em>Demo Notice: Pre-filled with sample demonstration card credentials. No live gateway is connected.</em>
+                  <em>Demo Notice: Pre-filled with sample demonstration card credentials. No real payment is charged.</em>
                 </p>
                 <div class="form-group">
                   <label for="chk-card-num" class="form-label">Card Number (Sample Demo)</label>
