@@ -45,7 +45,7 @@ window.COCOAURA_DATA = {
       tagline: "Hydrating Coolers & ABC Cleanse",
       description: "Zesty lime-mint coconut water mocktails and nutrient-dense apple-beetroot-carrot cold-pressed detox cleansers.",
       image: "assets/images/cat-chips.jpg",
-      productCount: 1
+      productCount: 2
     },
     {
       id: "Bottled Coconut Water",
@@ -76,9 +76,9 @@ window.COCOAURA_DATA = {
       availability: "Fresh Daily",
       isFeatured: true,
       isNew: false,
-      image: "assets/images/product-vco-jar.jpg",
+      image: "assets/images/signature-coconut.jpg",
       gallery: [
-        "assets/images/product-vco-jar.jpg",
+        "assets/images/signature-coconut.jpg",
         "assets/images/hero-main.jpg",
         "assets/images/lifestyle-pouring.jpg",
         "assets/images/process-selection.jpg"
@@ -119,9 +119,9 @@ window.COCOAURA_DATA = {
       availability: "Fresh Daily",
       isFeatured: true,
       isNew: true,
-      image: "assets/images/product-cold-pressed.jpg",
+      image: "assets/images/signature-sugarcane.jpg",
       gallery: [
-        "assets/images/product-cold-pressed.jpg",
+        "assets/images/signature-sugarcane.jpg",
         "assets/images/lifestyle-pouring.jpg",
         "assets/images/hero-main.jpg",
         "assets/images/process-extraction.jpg"
@@ -250,9 +250,9 @@ window.COCOAURA_DATA = {
       availability: "Fresh Daily",
       isFeatured: true,
       isNew: false,
-      image: "assets/images/product-cream.jpg",
+      image: "assets/images/lifestyle-malai-shake.jpg",
       gallery: [
-        "assets/images/product-cream.jpg",
+        "assets/images/lifestyle-malai-shake.jpg",
         "assets/images/cat-desiccated.jpg",
         "assets/images/product-butter.jpg",
         "assets/images/hero-home2.jpg"
@@ -381,9 +381,9 @@ window.COCOAURA_DATA = {
       availability: "Fresh Daily",
       isFeatured: false,
       isNew: false,
-      image: "assets/images/cat-chips.jpg",
+      image: "assets/images/product-flour.jpg",
       gallery: [
-        "assets/images/cat-chips.jpg",
+        "assets/images/product-flour.jpg",
         "assets/images/product-chips.jpg",
         "assets/images/process-selection.jpg",
         "assets/images/hero-home2.jpg"

@@ -518,7 +518,7 @@
 
           <div class="mobile-drawer-body">
             <div class="mobile-nav-group">
-              <button type="button" class="mobile-nav-trigger is-expanded" data-mobile-accordion="home-sub" aria-expanded="true">
+              <button type="button" class="mobile-nav-trigger is-expanded ${isHomeGroup ? "active" : ""}" data-mobile-accordion="home-sub" aria-expanded="true">
                 <span>Home</span>
                 <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
               </button>
@@ -529,7 +529,7 @@
             </div>
 
             <div class="mobile-nav-group">
-              <button type="button" class="mobile-nav-trigger is-expanded" data-mobile-accordion="shop-sub" aria-expanded="true">
+              <button type="button" class="mobile-nav-trigger is-expanded ${isShopGroup ? "active" : ""}" data-mobile-accordion="shop-sub" aria-expanded="true">
                 <span>Menu</span>
                 <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
               </button>

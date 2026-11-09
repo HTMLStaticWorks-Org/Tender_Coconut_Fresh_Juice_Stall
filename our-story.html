@@ -17,7 +17,7 @@
   <div id="site-header-mount"></div>
 
   <main>
-    <!-- PAGE HERO — BRAND INTRODUCTION & MISSION -->
+    <!-- PAGE HERO — BRAND INTRODUCTION -->
     <section class="page-hero-compact" aria-labelledby="story-hero-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -26,31 +26,42 @@
           <span aria-current="page">Our Story</span>
         </nav>
 
-        <div class="story-split" style="margin-top:1.5rem;">
+        <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:1.5rem;">
           <div>
             <span class="eyebrow">Our Story &amp; Stall Philosophy</span>
-            <h1 class="display-xl" id="story-hero-title" style="margin-bottom:1.25rem;">
-              Dedicated to Live Freshness &amp; Pure Hydration.
-            </h1>
-            <p class="lead-text" style="margin-bottom:1.25rem;">
-              Tender Coconut &amp; Fresh Juice Stall was founded on an unyielding principle: the sweetest hydration comes from fresh harvest, respect for nature, and immediate live preparation in front of you.
-            </p>
-            <p style="color:var(--color-text-muted); margin-bottom:1.75rem;">
-              For too long, street corners and supermarket shelves were filled with artificial syrups, water-diluted juices, and processed concentrates. We set out to build an authentic tender coconut and fresh fruit juice stall where hygiene meets tropical craftsmanship—100% pure, unadulterated, and naturally chilled.
-            </p>
-
-            <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
-              <a href="sourcing.html" class="btn btn-primary">
-                <span>Discover Grove Sourcing</span>
-                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-              <a href="shop.html" class="btn btn-outline">Explore Fresh Menu</a>
-            </div>
+            <h1 class="display-lg" id="story-hero-title">Dedicated to Live Freshness &amp; Pure Hydration</h1>
           </div>
+          <p style="max-width:480px; color:var(--color-text-muted); font-size:0.95rem;">
+            Founded on an unyielding principle: the sweetest hydration comes from fresh harvest, respect for nature, and immediate live preparation in front of you.
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <div class="hero-image-frame">
-            <img src="assets/images/hero-home2.jpg" alt="Tender Coconut & Fresh Juice Stall counter with fresh fruits and coconuts" width="680" height="580">
+    <!-- STORY NARRATIVE & CRAFTSMANSHIP OVERVIEW -->
+    <section class="section-padding" style="border-bottom:1px solid var(--color-border-subtle);">
+      <div class="container story-split">
+        <div>
+          <span class="eyebrow">The Origin</span>
+          <h2 class="heading-xl" style="margin-bottom:1.25rem;">Why We Built a Real Live Coconut &amp; Juice Stall</h2>
+          <p class="lead-text" style="margin-bottom:1.25rem;">
+            Tender Coconut &amp; Fresh Juice Stall was born from a simple observation: street stalls often had unmatched freshness but questionable hygiene, while supermarkets offered pasteurized bottled juices stripped of live enzymes.
+          </p>
+          <p style="color:var(--color-text-muted); margin-bottom:1.75rem;">
+            We set out to build an authentic neighborhood stall where spotless hygiene meets tropical craftsmanship. Every morning, 7-month young green coconuts arrive fresh from coastal groves, stacked high beside crates of peeled organic sugarcane, Valencia oranges, and crisp apples. We decap each nut live, press every stalk without friction heat, and serve pure vitality.
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
+            <a href="sourcing.html" class="btn btn-primary">
+              <span>Discover Grove Sourcing</span>
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="shop.html" class="btn btn-outline">Explore Fresh Menu</a>
           </div>
+        </div>
+
+        <div class="hero-image-frame">
+          <img src="assets/images/hero-home2.jpg" alt="Tender Coconut & Fresh Juice Stall counter with fresh fruits and coconuts" width="680" height="580" loading="lazy">
         </div>
       </div>
     </section>
@@ -115,14 +126,14 @@
       <div class="container story-split">
         <div class="story-collage">
           <div class="story-collage-main">
-            <img src="assets/images/lifestyle-pouring.jpg" alt="Pouring refreshing cold coconut water cooler" loading="lazy" width="520" height="650">
+            <img src="assets/images/sourcing-plantation.jpg" alt="Coastal palm orchard with freshly harvested tender green coconuts" loading="lazy" width="520" height="650">
           </div>
           <div class="story-collage-side">
             <div class="collage-box">
-              <img src="assets/images/process-selection.jpg" alt="Inspecting freshly decapped green coconut" loading="lazy" width="380" height="310">
+              <img src="assets/images/signature-coconut.jpg" alt="Macro view of freshly decapped green coconut with tender malai" loading="lazy" width="380" height="310">
             </div>
             <div class="collage-box">
-              <img src="assets/images/product-cream.jpg" alt="Tender coconut malai shake with pistachios" loading="lazy" width="380" height="310">
+              <img src="assets/images/product-butter.jpg" alt="Tender coconut malai dessert pudding in cup" loading="lazy" width="380" height="310">
             </div>
           </div>
         </div>
@@ -172,15 +183,18 @@
             <div>
               <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="testimonial-quote" style="margin-top:0.85rem;">
-                “Stopping by this tender coconut and fresh juice stall after my morning run has become my daily ritual. The coconuts are sliced open right in front of you, ice-cold and bursting with sweet water!”
+                “Sourcing real, pure green tender coconuts and unpasteurized raw fruit juices at scale is nearly impossible today. Their live stall masters treat every single nut with the precision of high culinary craft.”
               </p>
             </div>
             <div class="testimonial-author">
-              <div>
-                <strong style="display:block; font-size:0.95rem;">Arun Malhotra</strong>
-                <span style="font-size:0.8rem; color:var(--color-text-muted);">Marathon Runner · Daily Regular</span>
+              <div style="display:flex; align-items:center; gap:0.85rem;">
+                <img src="assets/images/avatar-4.jpg" alt="Chef Vikram Joshi" class="testimonial-avatar" width="48" height="48" loading="lazy">
+                <div>
+                  <strong style="display:block; font-size:0.95rem;">Chef Vikram Joshi</strong>
+                  <span style="font-size:0.8rem; color:var(--color-text-muted);">Executive Culinary Director · Coastal Resort</span>
+                </div>
               </div>
-              <span class="badge badge-outline">Tender Coconut</span>
+              <span class="badge badge-outline">Culinary Partner</span>
             </div>
           </article>
 
@@ -188,15 +202,18 @@
             <div>
               <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="testimonial-quote" style="margin-top:0.85rem;">
-                “We hired their live Tender Coconut &amp; Fresh Juice counter for our wedding reception. Guests were blown away by the live coconut decapping and freshly squeezed sugarcane and pomegranate juices!”
+                “We host weekend sunrise yoga sessions and order 40 tender coconuts and cold-pressed citrus juices every Saturday morning. The hydration is immediate, pure, and restores cellular balance better than any electrolyte drink.”
               </p>
             </div>
             <div class="testimonial-author">
-              <div>
-                <strong style="display:block; font-size:0.95rem;">Kavita &amp; Rohan Deshmukh</strong>
-                <span style="font-size:0.8rem; color:var(--color-text-muted);">Wedding Hosts &amp; Event Clients</span>
+              <div style="display:flex; align-items:center; gap:0.85rem;">
+                <img src="assets/images/avatar-5.jpg" alt="Sneha Sengupta" class="testimonial-avatar" width="48" height="48" loading="lazy">
+                <div>
+                  <strong style="display:block; font-size:0.95rem;">Sneha Sengupta</strong>
+                  <span style="font-size:0.8rem; color:var(--color-text-muted);">Ashtanga Yoga Teacher &amp; Studio Founder</span>
+                </div>
               </div>
-              <span class="badge badge-outline">Live Stall Counter</span>
+              <span class="badge badge-outline">Studio Partner</span>
             </div>
           </article>
 
@@ -204,32 +221,39 @@
             <div>
               <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="testimonial-quote" style="margin-top:0.85rem;">
-                “The Tender Coconut Malai Shake is out of this world. Super thick, perfectly sweet without any refined sugar, and generous chunks of fresh soft coconut flesh. Absolutely addictive!”
+                “The live coconut stall was the absolute centerpiece of our lawn celebration. Guests watched fresh coconuts being decapped on the wooden butcher block and personalized stamped husks made it unforgettable.”
               </p>
             </div>
             <div class="testimonial-author">
-              <div>
-                <strong style="display:block; font-size:0.95rem;">Dr. Maya Swaminathan</strong>
-                <span style="font-size:0.8rem; color:var(--color-text-muted);">Nutritionist &amp; Health Advocate</span>
+              <div style="display:flex; align-items:center; gap:0.85rem;">
+                <img src="assets/images/avatar-6.jpg" alt="Pooja &amp; Sameer Mehra" class="testimonial-avatar" width="48" height="48" loading="lazy">
+                <div>
+                  <strong style="display:block; font-size:0.95rem;">Pooja &amp; Sameer Mehra</strong>
+                  <span style="font-size:0.8rem; color:var(--color-text-muted);">25th Anniversary Celebration Hosts</span>
+                </div>
               </div>
-              <span class="badge badge-outline">Malai Shake</span>
+              <span class="badge badge-outline">Live Event Client</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CALLOUT -->
+    <!-- VISIT OUR FLAGSHIP STALL PRE-FOOTER -->
     <section class="section-padding-sm bg-secondary" style="border-top:1px solid var(--color-border);">
-      <div class="container container-narrow" style="text-align:center;">
-        <span class="eyebrow">Continue the Journey</span>
-        <h2 class="heading-xl" style="margin-bottom:0.85rem;">Explore How We Source &amp; Prepare Daily</h2>
-        <p class="lead-text" style="margin-bottom:1.75rem;">
-          Take a deep dive into our 6-step orchard-to-stall journey, coastal grove partners, and live preparation hygiene on our dedicated Sourcing page.
-        </p>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.85rem;">
-          <a href="sourcing.html" class="btn btn-primary btn-lg">Explore Dedicated Sourcing Page →</a>
-          <a href="shop.html" class="btn btn-outline btn-lg">Browse The Stall Menu</a>
+      <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:2rem;">
+        <div>
+          <span class="eyebrow">Neighborhood Destination</span>
+          <h2 class="heading-lg" style="margin-bottom:0.4rem;">Visit Our Flagship Neighborhood Stall</h2>
+          <p style="color:var(--color-text-muted); font-size:0.95rem; max-width:580px;">
+            Meet our master cutters, smell the morning citrus pressing, and pick your own heavy green tender coconut directly from today's grove harvest crate. Open 7 days a week from 6:30 AM to 10:30 PM.
+          </p>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
+          <a href="contact-bulk-enquiry.html#general-contact-section" class="btn btn-primary">
+            <span>Stall Directions &amp; Hours →</span>
+          </a>
+          <a href="shop.html" class="btn btn-outline">Order for Pickup</a>
         </div>
       </div>
     </section>
