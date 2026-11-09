@@ -40,7 +40,7 @@
             <span>Explore Full Stall Menu</span>
             <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a href="#home2-curated-collection" class="btn btn-outline btn-lg" style="color:#FAF8F4; border-color:rgba(255,255,255,0.4);">
+          <a href="#home2-curated-collection" class="btn btn-outline btn-lg">
             Inspect Curated Selection ↓
           </a>
         </div>
@@ -110,7 +110,7 @@
           <div class="editorial-strip-item">
             <div style="display:flex; align-items:center; gap:0.85rem;">
               <span class="editorial-strip-num">01</span>
-              <img src="assets/images/signature-coconut.jpg" alt="Farm-Fresh Green Tender Coconut" class="editorial-strip-thumb" loading="lazy">
+              <img src="assets/images/cat-water.jpg" alt="Farm-Fresh Green Tender Coconut" class="editorial-strip-thumb" loading="lazy">
             </div>
             <div>
               <h3 class="heading-md">Farm-Fresh Green Tender Coconut</h3>
@@ -127,7 +127,7 @@
           <div class="editorial-strip-item">
             <div style="display:flex; align-items:center; gap:0.85rem;">
               <span class="editorial-strip-num">02</span>
-              <img src="assets/images/signature-sugarcane.jpg" alt="Cold-Pressed Sugarcane Juice" class="editorial-strip-thumb" loading="lazy">
+              <img src="assets/images/process-extraction.jpg" alt="Cold-Pressed Sugarcane Juice" class="editorial-strip-thumb" loading="lazy">
             </div>
             <div>
               <h3 class="heading-md">Cold-Pressed Sugarcane Juice</h3>
@@ -144,7 +144,7 @@
           <div class="editorial-strip-item">
             <div style="display:flex; align-items:center; gap:0.85rem;">
               <span class="editorial-strip-num">03</span>
-              <img src="assets/images/lifestyle-morning-juice.jpg" alt="Pure Valencia Orange Juice" class="editorial-strip-thumb" loading="lazy">
+              <img src="assets/images/product-nectar.jpg" alt="Pure Valencia Orange Juice" class="editorial-strip-thumb" loading="lazy">
             </div>
             <div>
               <h3 class="heading-md">Pure Valencia Orange Juice</h3>
@@ -161,7 +161,7 @@
           <div class="editorial-strip-item">
             <div style="display:flex; align-items:center; gap:0.85rem;">
               <span class="editorial-strip-num">04</span>
-              <img src="assets/images/lifestyle-malai-shake.jpg" alt="Classic Tender Coconut Malai Shake" class="editorial-strip-thumb" loading="lazy">
+              <img src="assets/images/product-cream.jpg" alt="Classic Tender Coconut Malai Shake" class="editorial-strip-thumb" loading="lazy">
             </div>
             <div>
               <h3 class="heading-md">Classic Tender Coconut Malai Shake</h3>
@@ -246,42 +246,74 @@
       </div>
     </section>
 
-    <!-- 5. PROMOTIONAL & EVENT CATERING FEATURE -->
-    <section class="section-padding" aria-label="Promotional and Catering Offerings">
+    <!-- 5. EDITORIAL JUICERY ATELIER TASTING FLIGHT & COUNTER EXPERIENCE (PRE-FOOTER) -->
+    <section class="section-padding" aria-label="Stall Tasting Flight and Flagship Counter">
       <div class="container">
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
-          <!-- Tasting Bundle Promo -->
-          <div style="background:#153828; color:#FAF8F4; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-sm);">
+        <div class="atelier-tasting-grid" style="display:grid; grid-template-columns:1.25fr 0.85fr; gap:2rem; align-items:stretch;">
+          <!-- Left: Curated Tasting Flight Card -->
+          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-sm);">
             <div>
-              <span class="eyebrow" style="color:#E2B86B;">First-Order Welcome</span>
-              <h2 class="heading-lg" style="color:#FAF8F4; margin-bottom:0.75rem;">Save 10% on Your First Stall Order</h2>
-              <p style="color:rgba(250,248,244,0.90); font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">
-                Experience the difference of live decapped green tender coconuts and 100% pure fruit juices. Apply code <strong>FRESH10</strong> in your cart, plus enjoy free local delivery on orders over $60.
+              <span class="eyebrow" style="color:var(--color-supporting);">Daily Stall Tasting Flight</span>
+              <h2 class="heading-lg" style="margin:0.5rem 0 1rem;">Three Harvest Terroirs. One Live Counter.</h2>
+              <p style="color:var(--color-text-muted); font-size:0.95rem; line-height:1.65; margin-bottom:1.5rem;">
+                Every afternoon at our counter, our head cutter curates a signature tri-flight showcasing distinct coastal harvest micro-climates and natural brix sweetness profiles.
               </p>
+
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+                <div style="background:var(--color-bg-alt); border:1px solid var(--color-border-subtle); border-radius:var(--radius-md); padding:1.15rem;">
+                  <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--color-supporting); letter-spacing:0.08em; display:block; margin-bottom:0.25rem;">Flight 01 · Coastal</span>
+                  <h3 style="font-size:0.98rem; font-weight:700; margin:0 0 0.35rem;">Pollachi Green Coconut</h3>
+                  <p style="font-size:0.83rem; color:var(--color-text-muted); line-height:1.45; margin:0;">Brix 7.2° · High potassium · Delicately translucent with silky spoonable malai.</p>
+                </div>
+
+                <div style="background:var(--color-bg-alt); border:1px solid var(--color-border-subtle); border-radius:var(--radius-md); padding:1.15rem;">
+                  <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--color-supporting); letter-spacing:0.08em; display:block; margin-bottom:0.25rem;">Flight 02 · Soil Milled</span>
+                  <h3 style="font-size:0.98rem; font-weight:700; margin:0 0 0.35rem;">Mandya Red Cane Press</h3>
+                  <p style="font-size:0.83rem; color:var(--color-text-muted); line-height:1.45; margin:0;">Live cold-crushed with fresh key lime juice and crushed mountain root ginger.</p>
+                </div>
+              </div>
             </div>
-            <div class="promo-card-actions">
-              <button type="button" class="btn btn-primary" data-quick-add="vco-raw-glass" data-size="Regular Green (350ml)">
-                Quick-Add Green Coconut ($4.50)
-              </button>
-              <a href="cart.html" class="btn btn-outline-white">Go to Cart</a>
+
+            <div style="display:flex; flex-wrap:wrap; gap:0.85rem; margin-top:1rem;">
+              <a href="shop.html" class="btn btn-primary">
+                <span>Order Chilled Tasting Flight</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#home2-curated-collection" class="btn btn-outline">Explore Signatures ↑</a>
             </div>
           </div>
 
-          <!-- Wedding & Event Catering Feature -->
-          <div style="background:#1B4332; color:#FAF8F4; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-sm);">
+          <!-- Right: Flagship Stall Counter Schedule & Contact -->
+          <div style="background:linear-gradient(145deg, #153828 0%, #0F241A 100%); color:#FAF8F4; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-xl); padding:clamp(1.75rem, 3.5vw, 2.75rem); display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-sm);">
             <div>
-              <span class="eyebrow" style="color:#E2B86B;">Live Stall Event Desk</span>
-              <h2 class="heading-lg" style="color:#FAF8F4; margin-bottom:0.75rem;">Wedding &amp; Event Stall Bookings</h2>
-              <p style="color:rgba(250,248,244,0.90); font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">
-                We bring our signature rustic wooden stall, trained coconut cutters, hydraulic juice extractors, and custom monogrammed coconuts directly to your wedding or celebration.
+              <span class="eyebrow" style="color:#FFE082;">Live Stall Counter Hours</span>
+              <h2 class="heading-lg" style="color:#FAF8F4; margin:0.5rem 0 0.75rem;">Open 365 Days a Year</h2>
+              <p style="color:rgba(250,248,244,0.88); font-size:0.92rem; line-height:1.6; margin-bottom:1.5rem;">
+                From early sunrise joggers to evening family gatherings, our stainless steel decapping bar is open daily with chilled coconuts and freshly squeezed juices.
               </p>
+
+              <ul style="list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-direction:column; gap:0.75rem; font-size:0.9rem;">
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:0.5rem;">
+                  <span style="color:rgba(250,248,244,0.75);">Monday – Friday:</span>
+                  <strong>6:30 AM – 10:30 PM</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:0.5rem;">
+                  <span style="color:rgba(250,248,244,0.75);">Saturday &amp; Sunday:</span>
+                  <strong>6:00 AM – 11:00 PM</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; padding-top:0.25rem;">
+                  <span style="color:rgba(250,248,244,0.75);">Live Stall Decapping:</span>
+                  <span style="color:#FFE082; font-weight:700;">Every 30 Mins Live</span>
+                </li>
+              </ul>
             </div>
-            <div class="promo-card-actions">
-              <a href="contact-bulk-enquiry.html#bulk-enquiry" class="btn btn-accent">
-                Book Live Event Stall →
+
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="contact-bulk-enquiry.html#general-contact-section" class="btn btn-accent btn-block" style="text-align:center;">
+                Find Stall Counter Location →
               </a>
-              <a href="contact-bulk-enquiry.html" class="btn btn-outline-white">
-                Contact Catering Team
+              <a href="tel:+18005552626" class="btn btn-outline-white btn-block" style="text-align:center;">
+                Call Counter Desk: (800) 555-COCO
               </a>
             </div>
           </div>

@@ -368,32 +368,45 @@
       </div>
     </section>
 
-    <!-- 4. SHIPPING, FRESHNESS & SERVICE POLICIES -->
-    <section class="section-padding-sm bg-secondary" id="shipping-returns" style="border-top:1px solid var(--color-border);">
+    <!-- 4. URGENT EVENT HOTLINE & 2-HOUR CATERING GUARANTEE (PRE-FOOTER) -->
+    <section class="section-padding-sm bg-secondary" id="shipping-returns" style="border-top:1px solid var(--color-border);" aria-labelledby="urgent-desk-heading">
       <div class="container">
-        <div class="cards-2col-tab" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;" id="policies">
-          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem;">
-            <span class="eyebrow">Local Delivery Policy</span>
-            <h3 class="heading-sm" style="margin-bottom:0.45rem;">Cold-Chain Fast Dispatch</h3>
-            <p style="font-size:0.88rem; color:var(--color-text-muted);">
-              Takeaway orders and daily subscriptions are dispatched in insulated cold bags with ice packs to arrive fresh and chilled within 45 minutes of order placement.
-            </p>
-          </div>
+        <div style="background:linear-gradient(135deg, #143023 0%, #0F241A 100%); color:#FAF8F4; border-radius:var(--radius-xl); padding:clamp(2rem, 4vw, 3rem); border:1px solid rgba(255,255,255,0.15); box-shadow:var(--shadow-md);">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2.5rem; align-items:center;">
+            <div>
+              <span class="eyebrow" style="color:#FFE082;">Urgent Catering Desk</span>
+              <h2 class="heading-lg" id="urgent-desk-heading" style="color:#FAF8F4; margin:0.4rem 0 0.85rem;">Planning an Event in the Next 48 Hours?</h2>
+              <p style="color:rgba(250,248,244,0.85); font-size:0.95rem; line-height:1.65; margin-bottom:1.5rem;">
+                For last-minute weddings, corporate sports meets, or film productions, contact our emergency stall operations desk directly. We confirm staffing and coconut inventory within 120 minutes.
+              </p>
+              <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
+                <a href="tel:+18005552626" class="btn btn-accent btn-lg">
+                  Call Emergency Desk: (800) 555-COCO
+                </a>
+                <a href="https://wa.me/18005552626" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white btn-lg">
+                  WhatsApp Event Coordinator
+                </a>
+              </div>
+            </div>
 
-          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem;">
-            <span class="eyebrow">Freshness Guarantee</span>
-            <h3 class="heading-sm" style="margin-bottom:0.45rem;">100% Sweetness Promise</h3>
-            <p style="font-size:0.88rem; color:var(--color-text-muted);">
-              Nature varies, but our standards don't. If any tender coconut opened at our counter or delivered to your doorstep isn't perfectly sweet and fresh, we replace it instantly.
-            </p>
-          </div>
-
-          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem;">
-            <span class="eyebrow">Hygiene &amp; Privacy Notice</span>
-            <h3 class="heading-sm" style="margin-bottom:0.45rem;">Spotless Standards</h3>
-            <p style="font-size:0.88rem; color:var(--color-text-muted);">
-              All contact information and catering details submitted are protected and used strictly for stall order coordination. Cart and preferences are stored locally via <code>localStorage</code>.
-            </p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div style="background:rgba(255,255,255,0.08); border-radius:var(--radius-md); padding:1.25rem; border:1px solid rgba(255,255,255,0.1);">
+                <strong style="display:block; font-size:1.75rem; color:#FFE082; font-family:var(--font-heading);">120 Min</strong>
+                <span style="font-size:0.82rem; color:rgba(250,248,244,0.85);">Guaranteed quote turnaround</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.08); border-radius:var(--radius-md); padding:1.25rem; border:1px solid rgba(255,255,255,0.1);">
+                <strong style="display:block; font-size:1.75rem; color:#FFE082; font-family:var(--font-heading);">50 – 5,000</strong>
+                <span style="font-size:0.82rem; color:rgba(250,248,244,0.85);">Coconuts decapped live</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.08); border-radius:var(--radius-md); padding:1.25rem; border:1px solid rgba(255,255,255,0.1);">
+                <strong style="display:block; font-size:1.75rem; color:#FFE082; font-family:var(--font-heading);">100%</strong>
+                <span style="font-size:0.82rem; color:rgba(250,248,244,0.85);">Uniformed stall cutters</span>
+              </div>
+              <div style="background:rgba(255,255,255,0.08); border-radius:var(--radius-md); padding:1.25rem; border:1px solid rgba(255,255,255,0.1);">
+                <strong style="display:block; font-size:1.75rem; color:#FFE082; font-family:var(--font-heading);">Zero</strong>
+                <span style="font-size:0.82rem; color:rgba(250,248,244,0.85);">Husk waste left at venue</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

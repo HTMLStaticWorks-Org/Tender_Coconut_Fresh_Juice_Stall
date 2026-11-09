@@ -313,52 +313,137 @@
       </div>
     </section>
 
-    <!-- STALL JOURNAL FAQ ACCORDION -->
+    <!-- STALL JOURNAL FAQ ACCORDION (INTERACTIVE DROPDOWNS) -->
     <section class="section-padding" aria-labelledby="blog-faq-heading">
       <div class="container container-narrow">
         <div class="section-header center">
           <span class="eyebrow">Community Questions</span>
           <h2 class="heading-xl" id="blog-faq-heading">Frequently Asked About Fresh Coconuts &amp; Juices</h2>
+          <p class="lead-text" style="max-width:580px; margin:0.5rem auto 0;">
+            Click on any question below to expand detailed stall answers regarding hydration, shelf life, and nutrition.
+          </p>
         </div>
 
-        <div class="faq-list" style="display:flex; flex-direction:column; gap:0.85rem;">
-          <div class="faq-item" style="border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.25rem 1.5rem; background:var(--color-surface);">
-            <h3 class="heading-sm" style="margin-bottom:0.4rem; color:var(--color-primary);">How long does raw unpasteurized coconut water stay fresh?</h3>
-            <p style="font-size:0.92rem; color:var(--color-text-muted); line-height:1.6;">
-              Because our coconut water is 100% raw with zero thermal pasteurization or chemical preservatives, it should be consumed within 2 hours at ambient temperature or kept refrigerated at 2°C–4°C and finished within 48 hours.
-            </p>
+        <div class="faq-list">
+          <!-- Question 1 (Open by default) -->
+          <div class="faq-item is-open">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span>How long does raw unpasteurized coconut water stay fresh?</span>
+              <span class="faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Because our coconut water is 100% raw with zero thermal pasteurization or chemical preservatives, it should be consumed within 2 hours at ambient room temperature, or kept refrigerated at 2°C–4°C and finished within 48 hours. Once decapped, live enzymes begin interacting with ambient air, so cold storage is essential to preserve sweetness and micronutrients.
+              </p>
+            </div>
           </div>
 
-          <div class="faq-item" style="border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.25rem 1.5rem; background:var(--color-surface);">
-            <h3 class="heading-sm" style="margin-bottom:0.4rem; color:var(--color-primary);">Why does freshly pressed sugarcane juice turn darker over time?</h3>
-            <p style="font-size:0.92rem; color:var(--color-text-muted); line-height:1.6;">
-              Raw sugarcane contains polyphenol oxidase enzymes that react with oxygen—just like a sliced apple. This natural oxidation turns the frothy jade-green juice amber over 30 minutes. That's why we crush stalks live and squeeze fresh key lime, whose Vitamin C acts as a natural antioxidant shield.
-            </p>
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Why does freshly pressed sugarcane juice turn darker over time?</span>
+              <span class="faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Raw sugarcane contains active polyphenol oxidase enzymes that react with oxygen—just like a freshly sliced apple. This natural enzymatic oxidation turns frothy jade-green juice amber within 30 minutes. That's why we crush stalks live to order and squeeze fresh key lime, whose natural Vitamin C acts as an immediate antioxidant shield while enhancing flavor.
+              </p>
+            </div>
           </div>
 
-          <div class="faq-item" style="border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.25rem 1.5rem; background:var(--color-surface);">
-            <h3 class="heading-sm" style="margin-bottom:0.4rem; color:var(--color-primary);">What is the difference between green tender coconuts and brown supermarket coconuts?</h3>
-            <p style="font-size:0.92rem; color:var(--color-text-muted); line-height:1.6;">
-              They are the exact same botanical fruit at different life stages! Green coconuts are harvested young (7 months) for maximum sweet water (350ml–500ml) and thin spoonable malai. Brown hairy coconuts are fully mature (12+ months) where water has been absorbed into thick, oily copra used for grated coconut and oil extraction.
-            </p>
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>What is the difference between green tender coconuts and brown supermarket coconuts?</span>
+              <span class="faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p>
+                They are the exact same botanical fruit at different life stages! Green tender coconuts are harvested young (around 7 months) for maximum clear electrolyte water (350ml–500ml) and paper-thin, spoonable malai. Brown hairy supermarket coconuts are fully mature (12+ months), where the water has naturally absorbed into thick, dense, oily copra used for grated coconut and oil extraction.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Is raw coconut water safe to drink daily for fitness and hydration?</span>
+              <span class="faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Yes! Tender coconut water is naturally isotonic, with an osmolarity profile closely matching human blood plasma. It contains more bioavailable potassium than two bananas, alongside magnesium, calcium, and sodium without synthetic dyes or added refined sugars found in commercial sports drinks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span>Can we customize coconut shell monograms for weddings or private parties?</span>
+              <span class="faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <p>
+                Absolutely! Our live stall catering setup offers precision food-safe laser branding and thermal gold foil monograms on whole green coconuts with couple initials, wedding hashtags, or corporate logos. Inquire via our event desk at least 72 hours before your event date.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STALL JOURNAL NEWSLETTER & RECIPE DISPATCH PRE-FOOTER -->
-    <section class="section-padding-sm bg-secondary" style="border-top:1px solid var(--color-border);">
-      <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:2rem;">
-        <div>
-          <span class="eyebrow">Weekly Hydration Dispatch</span>
-          <h2 class="heading-lg" style="margin-bottom:0.4rem;">Subscribe to the Stall Hydration Journal</h2>
-          <p style="color:var(--color-text-muted); font-size:0.95rem; max-width:560px;">
-            Get weekly seasonal fruit arrival reports, home mocktail recipes with tender coconut water, and special subscriber invitations to live juice tasting events.
-          </p>
-        </div>
-        <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
-          <a href="shop.html" class="btn btn-primary">Browse Fresh Drinks →</a>
-          <a href="contact-bulk-enquiry.html#bulk-enquiry" class="btn btn-outline">Book Event Stall</a>
+    <!-- FREE STALL RECIPE HANDBOOK & HYDRATION GUIDE (PRE-FOOTER) -->
+    <section class="section-padding bg-secondary" style="border-top:1px solid var(--color-border);" aria-labelledby="recipe-handbook-heading">
+      <div class="container">
+        <div style="background:linear-gradient(135deg, #143023 0%, #0F241A 100%); color:#FAF8F4; border-radius:var(--radius-xl); padding:clamp(2rem, 4vw, 3rem); border:1px solid rgba(255,255,255,0.15); display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2.5rem; align-items:center;">
+          <div>
+            <span class="eyebrow" style="color:#FFE082;">Free Stall Digital Publication</span>
+            <h2 class="heading-xl" id="recipe-handbook-heading" style="color:#FAF8F4; margin:0.4rem 0 1rem;">
+              The Stall Master's Guide to Tropical Hydration
+            </h2>
+            <p style="color:rgba(250,248,244,0.85); font-size:0.96rem; line-height:1.65; margin-bottom:1.75rem;">
+              Download our curated 28-page digital guide featuring 12 live counter mocktail recipes, optimum post-run electrolyte replacement guidelines, and chef secrets for tender coconut malai desserts.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.75rem; font-size:0.9rem; color:rgba(250,248,244,0.9);">
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="color:#FFE082;">✔</span> 12 Signature Coconut Water &amp; Cane Mocktail Recipes
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="color:#FFE082;">✔</span> Natural Electrolyte Timing vs Artificial Sports Drinks
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="color:#FFE082;">✔</span> Low-Sugar Cold-Pressed Fruit Cleansing Protocols
+              </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
+              <a href="shop.html" class="btn btn-accent btn-lg">
+                Download Free Guide (PDF)
+              </a>
+              <a href="shop.html" class="btn btn-outline-white btn-lg">
+                Order Featured Drinks →
+              </a>
+            </div>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-lg); padding:2rem; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); text-align:center;">
+            <div style="font-size:3rem; margin-bottom:0.75rem;" aria-hidden="true">🥥 📖</div>
+            <span class="badge" style="background:#FFE082; color:#143023; font-weight:700; font-size:0.78rem; padding:0.3rem 0.75rem; border-radius:var(--radius-full); text-transform:uppercase; letter-spacing:0.08em;">Instant Digital Access</span>
+            <h3 style="font-size:1.25rem; color:#FAF8F4; margin:0.85rem 0 0.5rem;">2026 Edition · Stall Journal</h3>
+            <p style="font-size:0.85rem; color:rgba(250,248,244,0.75); line-height:1.5;">
+              Over 4,200 neighborhood runners, event hosts, and wellness seekers have unlocked our counter secrets.
+            </p>
+          </div>
         </div>
       </div>
     </section>
