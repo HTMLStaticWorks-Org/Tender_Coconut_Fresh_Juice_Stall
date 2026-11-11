@@ -616,21 +616,6 @@
       footerMount.innerHTML = `
         <footer class="site-footer">
           <div class="container">
-            <div class="footer-newsletter-band">
-              <div>
-                <span class="eyebrow footer-eyebrow">Daily Farm-Fresh Harvest &amp; Stall Updates</span>
-                <h3>Pure Hydration. Naturally Chilled.</h3>
-                <p style="font-size: 0.95rem;">
-                  Subscribe for morning harvest alerts, seasonal tropical juice drops, weekend stall specials, and live catering discounts.
-                </p>
-              </div>
-              <form class="newsletter-form" data-newsletter-form novalidate>
-                <label for="footer-newsletter-email" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;">Email address</label>
-                <input type="email" id="footer-newsletter-email" name="email" placeholder="Enter your email address..." required>
-                <button type="submit" class="btn btn-accent">Subscribe</button>
-              </form>
-            </div>
-
             <div class="footer-grid">
               <!-- Column 1: Brand Info -->
               <div class="footer-col">
@@ -698,6 +683,20 @@
                   <li><a href="contact-bulk-enquiry.html#policies">Privacy &amp; Terms</a></li>
                 </ul>
               </div>
+            </div>
+
+            <div class="footer-newsletter-inline">
+              <div>
+                <span class="eyebrow footer-eyebrow">Morning Harvest Alerts</span>
+                <p style="font-size: 0.9rem; margin: 0;">
+                  Subscribe for morning harvest dispatches, seasonal fruit juice drops, and weekend stall specials.
+                </p>
+              </div>
+              <form class="newsletter-form" data-newsletter-form novalidate>
+                <label for="footer-newsletter-email" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;">Email address</label>
+                <input type="email" id="footer-newsletter-email" name="email" placeholder="Enter your email address..." required>
+                <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+              </form>
             </div>
 
             <div class="footer-bottom">

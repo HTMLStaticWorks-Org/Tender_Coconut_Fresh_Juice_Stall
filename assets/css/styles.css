@@ -3175,6 +3175,52 @@ select.form-control {
   border-color: #D4A359;
 }
 
+.footer-newsletter-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.65rem 0;
+  border-bottom: 1.5px solid #E2D9CC;
+}
+
+[data-theme="dark"] .footer-newsletter-inline {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-newsletter-inline .footer-eyebrow {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .footer-newsletter-inline .footer-eyebrow {
+  color: #E2B86B;
+}
+
+.footer-newsletter-inline p {
+  color: #26382E;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .footer-newsletter-inline p {
+  color: #DDE6E0;
+}
+
+.footer-newsletter-inline .newsletter-form {
+  min-width: min(100%, 380px);
+}
+
+.footer-newsletter-inline .newsletter-form input {
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+}
+
 .footer-bottom {
   padding: 1.65rem 0;
   display: flex;
@@ -3191,7 +3237,7 @@ select.form-control {
   color: #B4C2B9;
 }
 
-/* Sections with .bg-secondary placed directly above footer */
+/* Sections with .bg-secondary */
 .bg-secondary {
   background-color: var(--color-secondary);
 }
@@ -3218,11 +3264,30 @@ select.form-control {
   color: #FAF8F4;
 }
 
-.bg-secondary p:not(.category-card-desc),
+.bg-secondary p:not(.category-card-desc):not(.chrono-desc):not(.dark-surface-text),
 .bg-secondary .lead-text {
-  color: #24352B !important;
+  color: #24352B;
   font-size: 0.98rem;
   line-height: 1.65;
+}
+
+[data-theme="dark"] .bg-secondary p:not(.category-card-desc):not(.chrono-desc):not(.dark-surface-text),
+[data-theme="dark"] .bg-secondary .lead-text {
+  color: #D2DDD5;
+}
+
+/* Explicit light-on-dark protection inside dark cards */
+.dark-surface h2,
+.dark-surface h3,
+.bulk-banner h2,
+.bulk-banner h3 {
+  color: #FAF8F4 !important;
+}
+
+.dark-surface p,
+.dark-surface .dark-surface-text,
+.bulk-banner p {
+  color: rgba(250, 248, 244, 0.88) !important;
 }
 
 /* Category cards pure white text protection */
@@ -3245,9 +3310,93 @@ select.form-control {
   color: #FFFFFF !important;
 }
 
-[data-theme="dark"] .bg-secondary p:not(.category-card-desc),
-[data-theme="dark"] .bg-secondary .lead-text {
-  color: #D2DDD5 !important;
+/* Daily Stall Hydration Chrono-Guide Cards (Blog Page) */
+.chrono-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.chrono-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.chrono-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-supporting);
+}
+
+.chrono-card-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--color-bg-alt);
+}
+
+.chrono-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.chrono-card:hover .chrono-card-media img {
+  transform: scale(1.05);
+}
+
+.chrono-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.chrono-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.85rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.95rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.chrono-ritual-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-supporting);
+}
+
+[data-theme="dark"] .chrono-ritual-label {
+  color: #E2B86B;
+}
+
+.chrono-title {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.chrono-desc {
+  font-size: 0.9rem !important;
+  color: var(--color-text-muted) !important;
+  line-height: 1.6 !important;
+  margin: 0;
+}
+
+[data-theme="dark"] .chrono-desc {
+  color: #C5D2C9 !important;
 }
 
 /* Promotional & Catering Card Actions (Home-2 and Promo Grids) */
@@ -3287,6 +3436,14 @@ select.form-control {
 @media (max-width: 560px) {
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+  .footer-newsletter-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer-newsletter-inline .newsletter-form {
+    min-width: 0;
+    width: 100%;
   }
 }
 
@@ -3551,6 +3708,7 @@ select.form-control {
   .testimonials-grid,
   .process-timeline,
   .blog-grid,
+  .chrono-grid,
   .lifestyle-grid,
   .transparency-grid,
   .gallery-grid,
@@ -3566,6 +3724,7 @@ select.form-control {
   .testimonials-grid > :last-child:nth-child(odd),
   .process-timeline > :last-child:nth-child(odd),
   .blog-grid > :last-child:nth-child(odd),
+  .chrono-grid > :last-child:nth-child(odd),
   .lifestyle-grid > :last-child:nth-child(odd),
   .transparency-grid > :last-child:nth-child(odd),
   .gallery-grid > :last-child:nth-child(odd),
@@ -3584,6 +3743,7 @@ select.form-control {
   .testimonials-grid,
   .process-timeline,
   .blog-grid,
+  .chrono-grid,
   .lifestyle-grid,
   .transparency-grid,
   .gallery-grid,
@@ -3598,6 +3758,7 @@ select.form-control {
   .testimonials-grid > :last-child:nth-child(odd),
   .process-timeline > :last-child:nth-child(odd),
   .blog-grid > :last-child:nth-child(odd),
+  .chrono-grid > :last-child:nth-child(odd),
   .lifestyle-grid > :last-child:nth-child(odd),
   .transparency-grid > :last-child:nth-child(odd),
   .gallery-grid > :last-child:nth-child(odd),
