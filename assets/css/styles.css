@@ -3418,6 +3418,70 @@ select.form-control {
   box-sizing: border-box;
 }
 
+/* Urgent Catering Desk (Contact Pre-Footer) */
+.urgent-desk-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.urgent-desk-grid > * {
+  min-width: 0;
+}
+
+.urgent-desk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+.urgent-desk-actions .btn {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.urgent-desk-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .urgent-desk-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .urgent-desk-actions .btn {
+    flex: 1 1 240px;
+    min-width: 0;
+    padding: 0.95rem 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .urgent-desk-actions {
+    flex-direction: column;
+  }
+
+  .urgent-desk-actions .btn {
+    width: 100%;
+    flex: none;
+    padding: 0.9rem 1.25rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .urgent-desk-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 991px) {
   .atelier-tasting-grid {
     grid-template-columns: 1fr !important;
